@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import ProjectForm from "@/components/projects/ProjectForm";
 
 const CreateProjectView = () => {
   const initialValues = {
@@ -35,6 +36,7 @@ const CreateProjectView = () => {
           noValidate
           className="mt-10 bg-white shadow-lg p-10 rounded-lg"
         >
+          <ProjectForm register={register} errors={errors} />
           <input
             type="submit"
             value={"Crear Tarea"}
