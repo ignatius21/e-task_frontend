@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import ProjectForm from "@/components/projects/ProjectForm";
+import { ProjectFormData } from "types";
 
 const CreateProjectView = () => {
-  const initialValues = {
+  const initialValues : ProjectFormData = {
     projectName: "",
     clientName: "",
     description: "",
@@ -13,7 +14,7 @@ const CreateProjectView = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
-  const handleForm = (data) => {
+  const handleForm = (data : ProjectFormData) => {
     console.log(data);
   };
   return (
@@ -21,7 +22,7 @@ const CreateProjectView = () => {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-5xl font-black">Crear Tarea</h1>
         <p className="text-2xl font-light text-gray-500 mt-5">
-          Completa el siguiente formulario para crear una nueva tarea
+          Complete el siguiente formulario para crear una nueva tarea
         </p>
         <nav className="my-5">
           <Link

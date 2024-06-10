@@ -1,17 +1,10 @@
+import { ProjectFormData } from "types";
 import ErrorMessage from "../ErrorMessage";
 import { UseFormRegister, FieldErrors } from "react-hook-form";
 
 interface ProjectFormProps {
-    register: UseFormRegister<{
-        projectName: string;
-        clientName: string;
-        description: string;
-        }>
-    errors: FieldErrors<{
-        projectName: string;
-        clientName: string;
-        description: string;
-    }>
+    register: UseFormRegister<ProjectFormData>
+    errors: FieldErrors<ProjectFormData>
 }
 
 export default function ProjectForm({register, errors}: ProjectFormProps) {
@@ -19,15 +12,15 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
         <>
             <div className="mb-5 space-y-3">
                 <label htmlFor="projectName" className="text-sm uppercase font-bold">
-                    Nombre del Proyecto
+                    Nombre
                 </label>
                 <input
                     id="projectName"
-                    className="w-full p-3  border border-gray-200"
+                    className="w-full p-3 border border-gray-200"
                     type="text"
-                    placeholder="Nombre del Proyecto"
+                    placeholder="Ingrese el nombre de la tarea que desea crear"
                     {...register("projectName", {
-                        required: "El Titulo del Proyecto es obligatorio",
+                        required: "El Titulo de la tarea es obligatorio",
                     })}
                 />
 
@@ -36,7 +29,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
                 )}
             </div>
 
-            <div className="mb-5 space-y-3">
+            {/* <div className="mb-5 space-y-3">
                 <label htmlFor="clientName" className="text-sm uppercase font-bold">
                     Nombre Cliente
                 </label>
@@ -53,7 +46,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
                 {errors.clientName && (
                     <ErrorMessage>{errors.clientName.message}</ErrorMessage>
                 )}
-            </div>
+            </div> */}
 
             <div className="mb-5 space-y-3">
                 <label htmlFor="description" className="text-sm uppercase font-bold">
@@ -62,9 +55,9 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
                 <textarea
                     id="description"
                     className="w-full p-3  border border-gray-200"
-                    placeholder="Descripción del Proyecto"
+                    placeholder="Agregue una breve descripción de la tarea a realizar"
                     {...register("description", {
-                        required: "Una descripción del proyecto es obligatoria"
+                        required: "Una descripción de la tarea es obligatoria"
                     })}
                 />
 
