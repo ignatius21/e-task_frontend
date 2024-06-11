@@ -14,9 +14,11 @@ const CreateProjectView = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues: initialValues });
+
   const handleForm = (data : ProjectFormData) => {
     console.log(data);
   };
+  
   return (
     <>
       <div className="max-w-3xl mx-auto">
