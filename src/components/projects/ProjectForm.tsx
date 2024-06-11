@@ -12,7 +12,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
         <>
             <div className="mb-5 space-y-3">
                 <label htmlFor="projectName" className="text-sm uppercase font-bold">
-                    Nombre
+                    tarea
                 </label>
                 <input
                     id="projectName"
@@ -29,24 +29,25 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
                 )}
             </div>
 
-            {/* <div className="mb-5 space-y-3">
+            <div className="mb-5 space-y-3">
                 <label htmlFor="clientName" className="text-sm uppercase font-bold">
-                    Nombre Cliente
+                    area
                 </label>
+                {/* // TODO: cambiar a un objeto seleccionable con las opciones correspondientes */}
                 <input
                     id="clientName"
                     className="w-full p-3  border border-gray-200"
                     type="text"
-                    placeholder="Nombre del Cliente"
+                    placeholder="Nombre del area a la que pertenece la tarea"
                     {...register("clientName", {
-                        required: "El Nombre del Cliente es obligatorio",
+                        required: "El Nombre del area es obligatorio",
                     })}
                 />
 
                 {errors.clientName && (
                     <ErrorMessage>{errors.clientName.message}</ErrorMessage>
                 )}
-            </div> */}
+            </div>
 
             <div className="mb-5 space-y-3">
                 <label htmlFor="description" className="text-sm uppercase font-bold">

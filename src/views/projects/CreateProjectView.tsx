@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import ProjectForm from "@/components/projects/ProjectForm";
-import { ProjectFormData } from "types";
+import { ProjectFormData } from "@/types/index";
+import { createProject } from "@/api/ProjectAPI";
 
 const CreateProjectView = () => {
   const initialValues : ProjectFormData = {
@@ -16,9 +17,9 @@ const CreateProjectView = () => {
   } = useForm({ defaultValues: initialValues });
 
   const handleForm = (data : ProjectFormData) => {
-    console.log(data);
+    createProject(data);
   };
-  
+
   return (
     <>
       <div className="max-w-3xl mx-auto">
