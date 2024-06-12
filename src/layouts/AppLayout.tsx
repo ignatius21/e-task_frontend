@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import Logo from "@/components/Logo";
 import NavMenu from "@/components/NavMenu";
+import {Bounce, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const AppLayout = () => {
   return (
@@ -19,6 +21,14 @@ const AppLayout = () => {
       <footer className="py-5">
         <p className="text-center">Todos los derechos reservados &copy; 2024</p>
       </footer>
+      <ToastContainer
+        pauseOnHover={false}
+        pauseOnFocusLoss={false}
+        closeButton={false}
+        transition={Bounce}
+        autoClose={2500}
+        theme="dark"
+      />
     </>
   );
 };
