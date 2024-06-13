@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Logo from "@/components/Logo";
 import NavMenu from "@/components/NavMenu";
-import {Bounce, ToastContainer} from 'react-toastify'
+import {Slide, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const AppLayout = () => {
@@ -25,7 +25,7 @@ const AppLayout = () => {
         pauseOnHover={false}
         pauseOnFocusLoss={false}
         closeButton={false}
-        transition={Bounce}
+        transition={Slide}
         autoClose={2500}
         theme="dark"
       />
