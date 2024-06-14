@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getProjects } from "@/api/ProjectAPI";
+import CardDashboard from "@/components/projects/CardDashboard";
 
 const DashboardView = () => {
 
@@ -24,7 +25,7 @@ const DashboardView = () => {
         </Link>
       </nav>
       {data.length ? (
-        <p>Proyectos</p>
+        <CardDashboard data={data} />
       ):(
         <p className="text-center py-20">No hay tareas aún {''}
           <Link to="/projects/create" className="text-fuchsia-500 font-bold">Crear tarea</Link>
