@@ -1,5 +1,5 @@
 import api from "@/lib/axios";
-import { Dashboard, ProjectFormData } from "@/types/index";
+import { Dashboard, Project, ProjectFormData } from "@/types/index";
 import { isAxiosError } from "axios";
 
 
@@ -24,6 +24,19 @@ export async function getProjects() {
         if(response.success) {
             return response.data;
         }
+    } catch (error) {
+        if (isAxiosError(error) && error.response) {
+            throw new Error(error.response.data.error);
+        }
+    }
+}
+
+// obtener projectos por ID
+
+export async function getProjectById(id: Project['_id']) {
+    try {
+        const { data } = await api(`/projects/${id}`);
+        return data;
     } catch (error) {
         if (isAxiosError(error) && error.response) {
             throw new Error(error.response.data.error);
