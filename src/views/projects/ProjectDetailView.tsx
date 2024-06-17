@@ -2,6 +2,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom"
 import {useQuery} from '@tanstack/react-query';
 import { getProjectById } from "@/api/ProjectAPI";
 import AddTaskModal from "@/components/tasks/AddTaskModal";
+import TaskList from "@/components/tasks/TaskList";
 
 const ProjectDetailView = () => {
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ const ProjectDetailView = () => {
             <nav className="my-5 gap-3 flex">
                 <button type="button" className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors" onClick={()=>navigate(location.pathname + '?newTask=true')}>Agregar Tarea</button>
             </nav>
+            <TaskList tasks={data.tasks}/>
             <AddTaskModal/>
         </>
     )
