@@ -22,7 +22,7 @@ const ProjectDetailView = () => {
             <p className="text-2xl font-light text-gray-500">{data.description}</p>
 
             <nav className="my-5 gap-3 flex">
-                <button type="button" className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors" onClick={()=>navigate('?newTask=true')}>Agregar Tarea</button>
+                <button type="button" className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors" onClick={()=>navigate(location.pathname + '?newTask=true')}>Agregar Tarea</button>
             </nav>
             <AddTaskModal/>
         </>
