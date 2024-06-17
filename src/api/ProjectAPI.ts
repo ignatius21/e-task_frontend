@@ -16,6 +16,7 @@ export async function createProject(formData: ProjectFormData) {
     }
 }
 
+// Obtener un listado de proyectos
 
 export async function getProjects() {
     try {
@@ -46,6 +47,7 @@ export async function getProjectById(id: Project['_id']) {
 
 
 // actualizar un proyecto
+
 type ProjectAPIType = {
     formData: ProjectFormData;
     projectId: Project['_id'];
