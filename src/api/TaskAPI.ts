@@ -68,7 +68,7 @@ export async function updateTask({formData, projectId, taskId}: Pick<TaskAPIType
 
 // eliminar una tarea
 
-export async function deleteTask({projectId, taskId}: TaskAPIType) {
+export async function deleteTask({projectId, taskId}: Pick<TaskAPIType,'projectId' | 'taskId'>) {
     try {
         const url = `/projects/${projectId}/tasks/${taskId}`;
         const { data } = await api.delete<string>(url);
