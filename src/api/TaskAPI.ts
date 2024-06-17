@@ -40,7 +40,7 @@ export async function getTasksByProject(projectId: Project['_id']) {
 // obtener tarea por ID
 
 
-export async function getTaskById({projectId, taskId}: TaskAPIType) {
+export async function getTaskById({projectId, taskId}: Pick<TaskAPIType, 'projectId' | 'taskId'>) {
     try {
         const url = `/projects/${projectId}/tasks/${taskId}`;
         const { data } = await api(url);
