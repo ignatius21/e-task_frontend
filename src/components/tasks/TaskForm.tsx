@@ -12,12 +12,12 @@ export default function TaskForm({errors, register} : TaskFormProps) {
       <>
         <div className="flex flex-col gap-5">
           <label className="font-normal text-2xl" htmlFor="name">
-            Nombre de la tarea
+            Area
           </label>
           <input
             id="name"
             type="text"
-            placeholder="Nombre de la tarea"
+            placeholder="Nombre del area"
             className="w-full p-3  border-gray-300 border"
             {...register("name", {
               required: "El nombre de la tarea es obligatorio",
