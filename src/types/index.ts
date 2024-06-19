@@ -1,7 +1,20 @@
 import {z} from 'zod';
 
-// Task schema
 
+// Auth & Users
+const authSchema = z.object({
+  name: z.string(),
+  email: z.string().email(),
+  password: z.string().min(6),
+  passwor_confirmation: z.string().min(6),
+});
+
+export type Auth = z.infer<typeof authSchema>;
+export type UserLoginForm = Pick<Auth, 'email' | 'password'>;
+
+
+
+// Task schema
 export const taskStatusSchema = z.enum(['pending', 'onHold', 'inProgress', 'underReview', 'completed']);
 export type TaskStatus = z.infer<typeof taskStatusSchema>;
 
