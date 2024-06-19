@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { UserLoginForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
+import { Link } from "react-router-dom";
 
 export default function LoginView() {
   const initialValues: UserLoginForm = {
@@ -62,6 +63,9 @@ export default function LoginView() {
           value="Iniciar Sesión"
           className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
         />
+        <nav className="mt-10 flex flex-col space-y-4">
+          <Link to={'/auth/register'} className="text-center text-gray-400 font-normal">No tienes una cuenta? <span className="text-fuchsia-500 font-bold ">Crea una</span></Link>
+        </nav>
       </form>
     </>
   );
