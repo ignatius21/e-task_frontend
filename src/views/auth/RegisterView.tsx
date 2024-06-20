@@ -2,6 +2,9 @@ import { useForm } from "react-hook-form";
 import { UserRegistrationForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
 import { Link } from "react-router-dom";
+import { useMutation } from "@tanstack/react-query";
+import { createAccount } from "@/api/AuthAPI";
+import { toast } from "react-toastify";
 
 export default function RegisterView() {
   const initialValues: UserRegistrationForm = {
@@ -15,12 +18,24 @@ export default function RegisterView() {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm<UserRegistrationForm>({ defaultValues: initialValues });
 
+  const { mutate } = useMutation({
+    mutationFn: createAccount,
+    onError: (error) => {
+      toast.error(error.message);
+    },
+    onSuccess: (data) => {
+      toast.success(data);
+      reset();
+    },
+  });
+
   const password = watch("password");
 
-  const handleRegister = (formData: UserRegistrationForm) => {};
+  const handleRegister = (formData: UserRegistrationForm) => mutate(formData);
 
   return (
     <>
@@ -78,8 +93,8 @@ export default function RegisterView() {
             {...register("password", {
               required: "El Password es obligatorio",
               minLength: {
-                value: 8,
-                message: "El Password debe ser mínimo de 8 caracteres",
+                value: 6,
+                message: "El Password debe ser mínimo de 6 caracteres",
               },
             })}
           />
@@ -99,7 +114,7 @@ export default function RegisterView() {
             {...register("password_confirmation", {
               required: "Repetir Password es obligatorio",
               validate: (value) =>
-                value === password || "Los Passwords no son iguales",
+                value === password || "El password no coincide",
             })}
           />
 
@@ -113,10 +128,16 @@ export default function RegisterView() {
           value="Registrarme"
           className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
         />
-        <nav className="mt-10 flex flex-col space-y-4">
-          <Link to={'/auth/login'} className="text-center text-gray-400 font-normal">Ya tienes una cuenta? <span className="text-fuchsia-500 font-bold ">Inicia sesion</span></Link>
-        </nav>
       </form>
+      <nav className="mt-10 flex flex-col space-y-4">
+        <Link
+          to={"/auth/login"}
+          className="text-center text-gray-400 font-normal"
+        >
+          Ya tienes una cuenta?{" "}
+          <span className="text-fuchsia-500 font-bold ">Inicia sesion</span>
+        </Link>
+      </nav>
     </>
   );
 }
