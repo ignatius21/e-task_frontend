@@ -14,6 +14,7 @@ export type Auth = z.infer<typeof authSchema>;
 export type UserLoginForm = Pick<Auth, 'email' | 'password'>;
 export type UserRegistrationForm = Pick<Auth, 'name' | 'email' | 'password' | 'password_confirmation' >;
 export type ConfirmToken = Pick<Auth,'token'>;
+export type RequestConfirmationCodeForm = Pick<Auth,'email'>;
 
 
 
