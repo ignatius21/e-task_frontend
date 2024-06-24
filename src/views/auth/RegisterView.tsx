@@ -142,6 +142,7 @@ const { mutate } = useMutation({
           Ya tienes una cuenta?{" "}
           <span className="text-fuchsia-500 font-bold ">Inicia sesion</span>
         </Link>
+        <Link to={'/auth/forgot-password'} className="text-center text-gray-400 font-normal">Olvidaste tu password? <span className="text-fuchsia-500 font-bold ">Reestablecelo</span></Link>
       </nav>
     </>
   );
