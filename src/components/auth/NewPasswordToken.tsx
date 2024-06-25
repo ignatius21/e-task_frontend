@@ -1,9 +1,38 @@
 import { PinInput, PinInputField } from "@chakra-ui/pin-input";
 import { Link } from "react-router-dom";
+import { ConfirmToken } from "@/types/index";
+import { useMutation } from "@tanstack/react-query";
+import { validatetoken } from "@/api/AuthAPI";
+import { toast } from "react-toastify";
 
-export default function NewPasswordToken() {
-  const handleChange = (token: string) => {};
-  const handleComplete = (token: string) => {};
+type NewPasswordTokenProps = {
+  token: ConfirmToken['token'],
+  setToken:  React.Dispatch<React.SetStateAction<string>>
+  setIsValidToken: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+
+
+
+export default function NewPasswordToken({token,setToken,setIsValidToken}: NewPasswordTokenProps) {
+
+  const {mutate} = useMutation({
+    mutationFn: validatetoken,
+    onError: (error) => {
+      toast.error(error.message)
+    },
+    onSuccess: (data) => {
+      toast.success(data)
+    }
+  })
+
+  const handleChange = (token: ConfirmToken['token']) => {
+    setToken(token);
+  };
+  const handleComplete = (token: ConfirmToken['token']) => {
+    mutate({token})
+    setIsValidToken(true);
+  };
 
   return (
     <>
@@ -13,7 +42,7 @@ export default function NewPasswordToken() {
         </label>
         <div className="flex justify-center gap-5">
           <PinInput
-            value={"123"}
+            value={token}
             onChange={handleChange}
             onComplete={handleComplete}
           >
