@@ -23,7 +23,7 @@ export default function LoginView() {
       toast.error(error.message);
     },
     onSuccess: (data) => {
-      toast.success(data?.message);
+      toast.success(data);
     },
   })
 
