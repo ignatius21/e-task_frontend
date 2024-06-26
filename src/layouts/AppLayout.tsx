@@ -1,10 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet,Navigate } from "react-router-dom";
 import Logo from "@/components/Logo";
 import NavMenu from "@/components/NavMenu";
 import {Slide, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from "@/hooks/useAuth";
 
 const AppLayout = () => {
+  const {data,isLoading,isError} = useAuth();
+  
+  if(isLoading) return <p>Cargando...</p>
+  if(isError) {
+    return <Navigate to="/auth/login" />
+  }
   return (
     <>
       <header className="bg-gray-800 py-5">
