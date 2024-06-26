@@ -1,13 +1,12 @@
 import { useForm } from "react-hook-form";
 import { UserRegistrationForm } from "@/types/index";
 import ErrorMessage from "@/components/ErrorMessage";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { createAccount } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
 
 export default function RegisterView() {
-  const navigate = useNavigate();
 
   const initialValues: UserRegistrationForm = {
     name: "",
@@ -32,9 +31,6 @@ const { mutate } = useMutation({
     onSuccess: (data) => {
         toast.success(data);
         reset();
-        setTimeout(() => {
-            navigate("/auth/login");
-        }, 3000);
     },
 });
 
