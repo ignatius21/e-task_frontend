@@ -76,3 +76,15 @@ export type Dashboard = z.infer<typeof Dashboard>;
 
 export type Project = z.infer<typeof Project>;
 export type ProjectFormData = Pick<Project, 'clientName' | 'projectName' |'description'>
+
+
+// Team schema
+
+const teamMemberSchema = userSchema.pick({
+  name: true,
+  email: true,
+  _id: true,
+});
+
+export type TeamMember = z.infer<typeof teamMemberSchema>;
+export type TeamMemberForm = Pick<TeamMember, 'email'>;
