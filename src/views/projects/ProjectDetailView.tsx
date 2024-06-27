@@ -1,4 +1,4 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom"
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom"
 import {useQuery} from '@tanstack/react-query';
 import { getProjectById } from "@/api/ProjectAPI";
 import AddTaskModal from "@/components/tasks/AddTaskModal";
@@ -20,19 +20,31 @@ const ProjectDetailView = () => {
     if(isLoading) return <div>Cargando...</div>
     if(isError) return <Navigate to='/404'/>
     if(data) return (
-        <>
-            <h1 className="text-5xl font-black">{data.projectName}</h1>
-            <p className="text-2xl font-light text-gray-500">{data.description}</p>
+      <>
+        <h1 className="text-5xl font-black">{data.projectName}</h1>
+        <p className="text-2xl font-light text-gray-500">{data.description}</p>
 
-            <nav className="my-5 gap-3 flex">
-                <button type="button" className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors" onClick={()=>navigate(location.pathname + '?newTask=true')}>Agregar Tarea</button>
-            </nav>
-            <TaskList tasks={data.tasks}/>
-            <AddTaskModal/>
-            <EditTaskData/>
-            <TaskModalDetails/>
-        </>
-    )
+        <nav className="my-5 gap-3 flex">
+          <button
+            type="button"
+            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors"
+            onClick={() => navigate(location.pathname + "?newTask=true")}
+          >
+            Agregar Tarea
+          </button>
+          <Link
+            to={"team"}
+            className="bg-fuchsia-400 hover:bg-fuchsia-500 px-10 py-3 text-white text-xl cursor-pointer transitions-colors"
+          >
+            Colaboradores
+          </Link>
+        </nav>
+        <TaskList tasks={data.tasks} />
+        <AddTaskModal />
+        <EditTaskData />
+        <TaskModalDetails />
+      </>
+    );
 };
 
 export default ProjectDetailView;
