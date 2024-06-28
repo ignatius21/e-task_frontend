@@ -29,7 +29,7 @@ const DashboardView = () => {
     },
     onSuccess: (data) => {
       toast.success(data);
-      queryClient.invalidateQueries({queryKey: ['projects']});
+      queryClient.invalidateQueries({queryKey: ["projects"]});
     },
   })
   if (data) return (
