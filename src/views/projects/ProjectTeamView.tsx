@@ -1,6 +1,6 @@
 import AddMemberModal from "@/components/team/AddMemberModal";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getProjectTeam, removeUserToProject } from "@/api/TeamAPI";
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
@@ -11,6 +11,8 @@ export default function ProjectTeamView() {
   const navigate = useNavigate();
   const params = useParams();
   const projectId = params.projectId!;
+
+  const queryClient = useQueryClient();
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["project", projectId],
@@ -25,6 +27,7 @@ export default function ProjectTeamView() {
     },
     onSuccess: (data) => {
       toast.success(data);
+      queryClient.invalidateQueries({queryKey:["project", projectId]});
     },
   });
 
