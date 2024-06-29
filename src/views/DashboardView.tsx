@@ -13,6 +13,7 @@ import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
 import { toast } from "react-toastify";
 import { Project } from "../types";
 import { useAuth } from "@/hooks/useAuth";
+import { isManager } from "@/utils/policies";
 
 
 const DashboardView = () => {
@@ -85,7 +86,7 @@ const DashboardView = () => {
                   </p>
                 </div>
               </div>
-              {project.manager === user?._id && (
+              {isManager(project.manager, user?._id ?? "") && (
                 <>
                   <div className="flex shrink-0 items-center gap-x-6">
                     <Menu as="div" className="relative flex-none">
