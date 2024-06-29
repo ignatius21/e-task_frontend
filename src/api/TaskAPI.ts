@@ -62,7 +62,7 @@ export async function updateTask({formData, projectId, taskId}: Pick<TaskAPIType
         return data;
     } catch (error) {
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data);
+            throw new Error(error.response?.data.message);
         }
     }
 }
@@ -76,7 +76,7 @@ export async function deleteTask({projectId, taskId}: Pick<TaskAPIType,'projectI
         return data;
     } catch (error) {
         if (isAxiosError(error)) {
-            throw new Error(error.response?.data);
+            throw new Error(error.response?.data.message);
         }
     }
 }
@@ -94,7 +94,7 @@ export async function updateTaskStatus({
     return data;
   } catch (error) {
     if (isAxiosError(error)) {
-      throw new Error(error.response?.data);
+      throw new Error(error.response?.data.message);
     }
   }
 }
