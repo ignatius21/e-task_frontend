@@ -74,6 +74,15 @@ const DashboardView = () => {
                     Area: {project.clientName}
                   </p>
                   <p className="text-sm text-gray-400">{project.description}</p>
+                  <p
+                    className={`font-bold ${
+                      project.manager === user?._id
+                        ? "bg-red-400 rounded-lg px-2 text-white py-1"
+                        : "bg-green-400 rounded-lg px-2 text-gray-700 py-1"
+                    }`}
+                  >
+                    {project.manager === user?._id ? "Manager" : "Colaborador"}
+                  </p>
                 </div>
               </div>
               {project.manager === user?._id && (
