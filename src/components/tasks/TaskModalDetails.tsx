@@ -109,12 +109,14 @@ export default function TaskModalDetails() {
                       {data.name}
                     </DialogTitle>
                     <p className="text-lg text-slate-500 mb-2 capitalize">Descripción:{" "}{data.description}</p>
-                    {data.completedBy && (
-                      <p>
-                        <span className="font-bold text-slate-600">Tarea completada por:</span>
-                        {" "}{data.completedBy.name}
-                      </p>
-                    )}
+                    <p className="text-lg text-slate-500 mb-2">Historial de cambios</p>
+                    <ul className="list-disc list-inside">
+                      {data.completedBy.map((completed: { user: { name: string }, status: string }, index: number) => (
+                        <li key={index} className="text-sm text-slate-400">
+                          {completed.user.name} - {statusTranslations[completed.status]}
+                        </li>
+                      ))}
+                    </ul>
                     <div className="my-5 space-y-3">
                       <label className="font-bold">Estado Actual:</label>
                       <select className="w-full p-3 bg-white border border-gray-300" defaultValue={data.status} onChange={handleChange}>
