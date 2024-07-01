@@ -1,6 +1,7 @@
 import { Task } from "@/types/index";
 import TaskCard from "./TaskCard";
 import { statusTranslations } from "@/locales/es";
+import DropTask from "./DropTask";
 
 type TaskListProps = {
   tasks: Task[];
@@ -44,6 +45,7 @@ export default function TaskList({ tasks, canEdit }: TaskListProps) {
             <h3 className={`capitalize text-xl border-t-8 font-bold bg-white justify-center flex ${statusColors[status]}`}>
               {statusTranslations[status]}
             </h3>
+            <DropTask />
             <hr className="my-5" />
             <div className="h-[1px] bg-slate-300" />
             <ul className="mt-5 space-y-5">
