@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import {deleteProject, getProjects } from "@/api/ProjectAPI";
+import {  useQuery } from "@tanstack/react-query";
+import {getProjects } from "@/api/ProjectAPI";
 import { Fragment } from "react";
 import {
   Menu,
@@ -10,7 +10,6 @@ import {
   Transition,
 } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
-import { toast } from "react-toastify";
 import { Project } from "../types";
 import { useAuth } from "@/hooks/useAuth";
 import { isManager } from "@/utils/policies";
@@ -21,8 +20,6 @@ const DashboardView = () => {
 
   const {data: user, isLoading: authLoading} = useAuth();
 
-  const queryClient = useQueryClient();
-
   const navigate = useNavigate();
 
   const location = useLocation();
@@ -31,16 +28,7 @@ const DashboardView = () => {
     queryKey: ["projects"],
     queryFn: getProjects,
   });
-  const {mutate} = useMutation({
-    mutationFn: deleteProject,
-    onError: (error) => {
-      toast.error(error.message);
-    },
-    onSuccess: (data) => {
-      toast.success(data);
-      queryClient.invalidateQueries({queryKey: ["projects"]});
-    },
-  })
+  
 
   if(authLoading) return <p>Cargando...</p>
 
