@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {deleteProject, getProjects } from "@/api/ProjectAPI";
 import { Fragment } from "react";
@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import { Project } from "../types";
 import { useAuth } from "@/hooks/useAuth";
 import { isManager } from "@/utils/policies";
+import DeleteProjectModal from "@/components/projects/DeleteProjectModal";
 
 
 const DashboardView = () => {
@@ -21,6 +22,10 @@ const DashboardView = () => {
   const {data: user, isLoading: authLoading} = useAuth();
 
   const queryClient = useQueryClient();
+
+  const navigate = useNavigate();
+
+  const location = useLocation();
 
   const {data} = useQuery({
     queryKey: ["projects"],
@@ -127,7 +132,7 @@ const DashboardView = () => {
                             <button
                               type="button"
                               className="block px-3 py-1 text-sm leading-6 text-red-500"
-                              onClick={() => mutate(project._id)}
+                              onClick={() => navigate(location.pathname + `?deleteProject=${project._id}`)}
                             >
                               Eliminar Proyecto
                             </button>
@@ -149,6 +154,7 @@ const DashboardView = () => {
           </Link>
         </p>
       )}
+      <DeleteProjectModal />
     </>
   );
 };
