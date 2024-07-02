@@ -10,7 +10,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import { EllipsisVerticalIcon } from "@heroicons/react/20/solid";
-import { Project } from "../types";
+// import { Project } from "../types";
 import { useAuth } from "@/hooks/useAuth";
 import { isManager } from "@/utils/policies";
 import DeleteProjectModal from "@/components/projects/DeleteProjectModal";
@@ -36,14 +36,14 @@ const DashboardView = () => {
     <>
       <h1 className="text-5xl font-black">Mis Tareas</h1>
       <p className="text-2xl font-light text-gray-500 mt-5">
-        Maneje y administre sus tareas
+        Maneje y administre sus trabajos
       </p>
       <nav className="my-5">
         <Link
           to="/projects/create"
           className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
         >
-          Nueva Tarea
+          Nueva orden de trabajo
         </Link>
       </nav>
       {data.length ? (
@@ -51,7 +51,7 @@ const DashboardView = () => {
           role="list"
           className="divide-y divide-gray-100 border border-gray-100 mt-10 bg-white shadow-lg rounded-lg"
         >
-          {data.map((project: Project) => (
+          {data.map((project) => (
             <li
               key={project._id}
               className="flex justify-between gap-x-6 px-5 py-10"
