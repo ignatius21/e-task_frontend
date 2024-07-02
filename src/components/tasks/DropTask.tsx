@@ -12,10 +12,10 @@ export default function DropTask({status}: DropTaskProps) {
     <div className="text-xs font-semibold uppercase p-2 border border-dashed border-slate-500 mt-5 grid place-content-center text-slate-500"
     ref={setNodeRef}
     style={{
-        backgroundColor: isOver ? "rgba(0,0,0,0.1)" : undefined,
+        backgroundColor: isOver ? "rgba(15, 197, 12, 0.1)" : undefined,
     }}
     >
-        Soltar Tarea Aqui - {status}
+        Soltar Tarea Aqui
     </div>
   )
 }
