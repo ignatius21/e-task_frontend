@@ -81,10 +81,13 @@ export const Dashboard = z.array(
     manager: true,
   }),
 );
-
 export type Dashboard = z.infer<typeof Dashboard>;
 
-
+export const editProjectSchema = Project.pick({
+  projectName: true,
+  clientName: true,
+  description: true,
+});
 
 export type Project = z.infer<typeof Project>;
 export type ProjectFormData = Pick<Project, 'clientName' | 'projectName' |'description'>

@@ -20,9 +20,9 @@ type TaskCardProps = {
 };
 
 export default function TaskCard({ task, canEdit }: TaskCardProps) {
-  const {attributes,listeners,setNodeRef,transform} = useDraggable({
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({
     id: task._id,
-  })
+  });
   const navigate = useNavigate();
   const params = useParams();
   const projectId = params.projectId!;
@@ -40,25 +40,29 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
     },
   });
 
-  const style = transform ? {
-    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-  }: undefined;
+  const style = transform
+    ? {
+        transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+        padding: "1.25rem",
+        backgroundColor: "#fff",
+        width: "300px",
+        borderWidth: "1px",
+        borderColor: "rgb(203 213 225 / var(--tw-border-opacity))",
+      }
+    : undefined;
 
   return (
     <li className="p-5 bg-white border-slate-700 flex justify-between gap-3">
-      <div className="min-w-0 lef flex-col gap-y-4"
-      {...listeners}
-      {...attributes}
-      ref={setNodeRef}
-      style={style}
+      <div
+        className="min-w-0 lef flex-col gap-y-4"
+        {...listeners}
+        {...attributes}
+        ref={setNodeRef}
+        style={style}
       >
-        <button
-          type="button"
-          className="text-xl font-bold text-slate-700 text-left"
-          onClick={() => navigate(location.pathname + `?viewTask=${task._id}`)}
-        >
+        <p className="text-xl font-bold text-slate-700 text-left">
           {task.name}
-        </button>
+        </p>
         <p className="text-slate-500">{task.description}</p>
       </div>
       <div className="flex shrink-0  gap-x-6">
@@ -78,6 +82,18 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
               leaveTo="transform opacity-0 scale-95"
             >
               <MenuItems className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+                <MenuItem>
+                  <button
+                    type="button"
+                    className="block px-3 py-1 text-sm leading-6 text-gray-900"
+                    onClick={() =>
+                      navigate(location.pathname + `?viewTask=${task._id}`)
+                    }
+                  >
+                    Ver Tarea
+                  </button>
+                </MenuItem>
+
                 <MenuItem>
                   <button
                     type="button"
