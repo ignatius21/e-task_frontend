@@ -45,6 +45,17 @@ export async function getProjectById(id: Project['_id']) {
         }
     }
 }
+export async function getFullProject(id: Project['_id']) {
+    try {
+        const { data } = await api(`/projects/${id}`);
+        const response = editProjectSchema.safeParse(data);
+        return response.data;
+    } catch (error) {
+        if (isAxiosError(error) && error.response) {
+            throw new Error(error.response.data.error);
+        }
+    }
+}
 
 
 // actualizar un proyecto

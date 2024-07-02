@@ -1,4 +1,4 @@
-import { Task } from "@/types/index";
+import { TaskProject } from "@/types/index";
 import {
   Menu,
   MenuButton,
@@ -15,7 +15,7 @@ import { deleteTask } from "@/api/TaskAPI";
 import { useDraggable } from "@dnd-kit/core";
 
 type TaskCardProps = {
-  task: Task;
+  task: TaskProject;
   canEdit: boolean;
 };
 
