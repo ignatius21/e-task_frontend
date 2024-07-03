@@ -36,14 +36,9 @@ export default function LoginView() {
 
   return (
     <>
-      <h1 className="text-5xl font-black text-white">Iniciar sesion</h1>
-      <p className="text-2xl font-light text-white mt-5">
-        comienza a organizar tus tareas {""}
-        <span className=" text-fuchsia-500 font-bold"> iniciando sesion en este formulario</span>
-      </p>
       <form
         onSubmit={handleSubmit(handleLogin)}
-        className="space-y-8 p-10 mt-10 bg-white"
+        className="space-y-8 p-10 mt-10 bg-white rounded-2xl"
         noValidate
       >
         <div className="flex flex-col gap-5">
@@ -53,7 +48,7 @@ export default function LoginView() {
             id="email"
             type="email"
             placeholder="Email de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3 border-slate-200 border rounded-2xl"
             {...register("email", {
               required: "El Email es obligatorio",
               pattern: {
@@ -71,7 +66,7 @@ export default function LoginView() {
           <input
             type="password"
             placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            className="w-full p-3 mb-3 border-slate-200 border rounded-2xl"
             {...register("password", {
               required: "El Password es obligatorio",
             })}
@@ -80,11 +75,19 @@ export default function LoginView() {
             <ErrorMessage>{errors.password.message}</ErrorMessage>
           )}
         </div>
+          <Link
+            to={"/auth/forgot-password"}
+            className=" text-gray-400 font-normal"
+          >
+            Olvidaste tu password?{" "}
+            <span className="text-blue-500 font-bold ">Reestablecelo</span>
+          </Link>
+        
 
         <input
           type="submit"
           value="Iniciar Sesión"
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="bg-blue-700 hover:bg-blue-500 w-full p-3  text-white font-black  text-xl cursor-pointer rounded-2xl"
         />
         <nav className="mt-10 flex flex-col space-y-4">
           <Link
@@ -92,14 +95,7 @@ export default function LoginView() {
             className="text-center text-gray-400 font-normal"
           >
             No tienes una cuenta?{" "}
-            <span className="text-fuchsia-500 font-bold ">Crea una</span>
-          </Link>
-          <Link
-            to={"/auth/forgot-password"}
-            className="text-center text-gray-400 font-normal"
-          >
-            Olvidaste tu password?{" "}
-            <span className="text-fuchsia-500 font-bold ">Reestablecelo</span>
+            <span className="text-blue-500 font-bold ">Crea una</span>
           </Link>
         </nav>
       </form>
