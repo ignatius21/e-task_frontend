@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { login } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import Logo from "@/components/Logo";
 
 export default function LoginView() {
 
@@ -40,7 +41,10 @@ export default function LoginView() {
         onSubmit={handleSubmit(handleLogin)}
         className="space-y-8 p-10 mt-10 bg-white rounded-2xl"
         noValidate
-      >
+        >
+          <div className="">
+            <Logo/>
+          </div>
         <div className="flex flex-col gap-5">
           <label className="font-normal text-2xl">Email</label>
 
