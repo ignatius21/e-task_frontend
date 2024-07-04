@@ -41,7 +41,7 @@ const DashboardView = () => {
       <nav className="my-5">
         <Link
           to="/projects/create"
-          className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+          className="bg-blue-700 hover:bg-blue-500 w-full p-3  text-white text-xl cursor-pointer rounded-2xl"
         >
           Nueva orden de trabajo
         </Link>
@@ -137,7 +137,7 @@ const DashboardView = () => {
       ) : (
         <p className="text-center py-20">
           No hay tareas aún {""}
-          <Link to="/projects/create" className="text-fuchsia-500 font-bold">
+          <Link to="/projects/create" className="text-blue-500 font-bold">
             Crear tarea
           </Link>
         </p>
