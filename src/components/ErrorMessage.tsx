@@ -15,7 +15,7 @@ const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`rounded-2xl text-center my-2 bg-red-100 text-red-600 font-bold p-3 uppercase text-sm ${
+      className={`rounded-2xl text-center my-2 bg-blue-300 text-white font-bold p-3 uppercase text-sm ${
         showError ? "" : "hidden"
       }`}
     >
