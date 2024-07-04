@@ -196,11 +196,12 @@ export default function RegisterView() {
           )}
         </div>
 
-        <input
+        <button
           type="submit"
-          value="Registrarme"
-          className="bg-blue-700 hover:bg-blue-500 w-full p-3  text-white font-black  text-xl cursor-pointer rounded-2xl"
-        />
+          className="beautiful-button w-full cursor-pointer"
+        >
+          Registrarme
+        </button>
         <nav className="mt-10 flex flex-col space-y-4">
           <Link
             to={"/auth/login"}
