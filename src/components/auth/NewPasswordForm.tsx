@@ -5,6 +5,7 @@ import ErrorMessage from "@/components/ErrorMessage";
 import { useMutation } from "@tanstack/react-query";
 import { updatePasswordWithToken } from "@/api/AuthAPI";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 
 type NewPasswordFormProps = {
@@ -50,20 +51,24 @@ export default function NewPasswordForm({token}: NewPasswordFormProps) {
 
   const password = watch("password");
 
+  const [isPasswordFocused, setIsPasswordFocused] = useState(false);
+  const [isPasswordConfirmationFocused, setIsPasswordConfirmationFocused] = useState(false);
+
   return (
     <>
       <form
         onSubmit={handleSubmit(handleNewPassword)}
-        className="space-y-8 p-10  bg-white mt-10"
+        className="space-y-8 p-10  bg-white mt-10 rounded-2xl"
         noValidate
       >
         <div className="flex flex-col gap-5">
           <label className="font-normal text-2xl">Password</label>
+          <div className="relative flex items-center">
 
           <input
             type="password"
-            placeholder="Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            placeholder="Ingresar password"
+            className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
             {...register("password", {
               required: "El Password es obligatorio",
               minLength: {
@@ -71,7 +76,24 @@ export default function NewPasswordForm({token}: NewPasswordFormProps) {
                 message: "El Password debe ser mínimo de 8 caracteres",
               },
             })}
+            onFocus={() => setIsPasswordFocused(true)}
+              onBlur={() => setIsPasswordFocused(false)}
           />
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke={isPasswordFocused ? "blue" : "currentColor"}
+              className="absolute left-3 top-3 h-6 w-6 text-slate-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
+              />
+            </svg>
+          </div>
           {errors.password && (
             <ErrorMessage>{errors.password.message}</ErrorMessage>
           )}
@@ -79,18 +101,36 @@ export default function NewPasswordForm({token}: NewPasswordFormProps) {
 
         <div className="flex flex-col gap-5">
           <label className="font-normal text-2xl">Repetir Password</label>
+          <div className="flex relative items-center">
 
           <input
             id="password_confirmation"
             type="password"
-            placeholder="Repite Password de Registro"
-            className="w-full p-3  border-gray-300 border"
+            placeholder="Repetir password"
+            className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
             {...register("password_confirmation", {
               required: "Repetir Password es obligatorio",
               validate: (value) =>
                 value === password || "Los Passwords no son iguales",
             })}
+            onFocus={() => setIsPasswordConfirmationFocused(true)}
+              onBlur={() => setIsPasswordConfirmationFocused(false)}
           />
+          <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke={isPasswordConfirmationFocused ? "blue" : "currentColor"}
+              className="absolute left-3 top-3 h-6 w-6 text-slate-400"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33"
+              />
+            </svg>
+          </div>
 
           {errors.password_confirmation && (
             <ErrorMessage>{errors.password_confirmation.message}</ErrorMessage>
@@ -100,7 +140,7 @@ export default function NewPasswordForm({token}: NewPasswordFormProps) {
         <input
           type="submit"
           value="Establecer Password"
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="bg-blue-700 hover:bg-blue-500 w-full p-3  text-white font-black  text-xl cursor-pointer rounded-2xl"
         />
       </form>
     </>
