@@ -132,11 +132,12 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
           )}
         </div>
 
-        <input
+        <button
           type="submit"
-          value="Establecer Password"
-          className="bg-blue-700 hover:bg-blue-500 w-full p-3  text-white font-black  text-xl cursor-pointer rounded-2xl"
-        />
+          className="beautiful-button w-full cursor-pointer"
+        >
+          Establecer password
+        </button>
       </form>
     </>
   );
