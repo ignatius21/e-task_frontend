@@ -60,7 +60,7 @@ export default function NewPasswordToken({token,setToken,setIsValidToken}: NewPa
           to="/auth/forgot-password"
           className="text-center text-gray-300 font-normal"
         >
-          Solicitar un nuevo Código
+          Solicitar un nuevo <span className="font-bold text-blue-500">Código</span>
         </Link>
       </nav>
     </>
