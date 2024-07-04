@@ -49,7 +49,7 @@ export default function RegisterView() {
       <h1 className="text-5xl font-black text-white">Crea tu cuenta</h1>
       <form
         onSubmit={handleSubmit(handleRegister)}
-        className="space-y-8 p-10  bg-white mt-10 rounded-2xl"
+        className="space-y-8 p-10 bg-white mt-10 rounded-2xl w-96"
         noValidate
       >
         <div className="flex flex-col gap-5">
