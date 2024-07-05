@@ -62,7 +62,7 @@ export default function RegisterView() {
               id="email"
               type="email"
               placeholder="Email de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("email", {
                 required: "El Email de registro es obligatorio",
                 pattern: {
@@ -78,7 +78,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isEmailFocused ? "blue" : "currentColor"}
+              stroke={isEmailFocused ? "CornflowerBlue" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
@@ -97,7 +97,7 @@ export default function RegisterView() {
             <input
               type="name"
               placeholder="Nombre de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("name", {
                 required: "El Nombre de usuario es obligatorio",
               })}
@@ -109,7 +109,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isUserFocused ? "red" : "currentColor"}
+              stroke={isUserFocused ? "IndianRed" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
@@ -128,7 +128,7 @@ export default function RegisterView() {
             <input
               type="password"
               placeholder="Password de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password", {
                 required: "El Password es obligatorio",
                 minLength: {
@@ -144,7 +144,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordFocused ? "green" : "currentColor"}
+              stroke={isPasswordFocused ? "MediumAquamarine" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
@@ -166,7 +166,7 @@ export default function RegisterView() {
               id="password_confirmation"
               type="password"
               placeholder="Repite Password de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password_confirmation", {
                 required: "Repetir Password es obligatorio",
                 validate: (value) =>
@@ -180,7 +180,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordConfirmationFocused ? "violet" : "currentColor"}
+              stroke={isPasswordConfirmationFocused ? "MediumAquamarine" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
