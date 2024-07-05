@@ -57,7 +57,7 @@ export default function LoginView() {
               id="email"
               type="email"
               placeholder="Email de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("email", {
                 required: "El Email es obligatorio",
                 pattern: {
@@ -73,7 +73,7 @@ export default function LoginView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isEmailFocused ? "blue" : "currentColor"}
+              stroke={isEmailFocused ? "CornflowerBlue" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
@@ -93,7 +93,7 @@ export default function LoginView() {
             <input
               type="password"
               placeholder="Password de Registro"
-              className="w-full p-3 mb-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 mb-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password", {
                 required: "El Password es obligatorio",
               })}
@@ -105,7 +105,7 @@ export default function LoginView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordFocused ? "green" : "currentColor"}
+              stroke={isPasswordFocused ? "MediumAquamarine" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
