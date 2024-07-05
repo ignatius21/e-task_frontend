@@ -43,7 +43,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
 
         <form
           onSubmit={handleSubmit(handleEditProfile)}
-          className=" mt-14 space-y-5  bg-white shadow-lg p-10 rounded-l"
+          className="space-y-8 p-10 mt-10 bg-white rounded-2xl"
           noValidate
         >
           <div className="mb-5 space-y-3">
@@ -54,7 +54,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
               id="name"
               type="text"
               placeholder="Tu Nombre"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("name", {
                 required: "Nombre de usuario es obligatoro",
               })}
@@ -70,7 +70,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
               id="text"
               type="email"
               placeholder="Tu Email"
-              className="w-full p-3  border border-gray-200"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("email", {
                 required: "EL e-mail es obligatorio",
                 pattern: {
@@ -83,11 +83,13 @@ export default function ProfileForm({ data }: ProfileFormProps) {
               <ErrorMessage>{errors.email.message}</ErrorMessage>
             )}
           </div>
-          <input
+          <button
             type="submit"
             value="Guardar Cambios"
-            className="bg-fuchsia-600 w-full p-3 text-white uppercase font-bold hover:bg-fuchsia-700 cursor-pointer transition-colors"
-          />
+            className="beautiful-button w-full"
+          >
+            Guardar Cambios
+          </button>
         </form>
       </div>
     </>

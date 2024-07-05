@@ -1,4 +1,4 @@
-import { Outlet,Navigate } from "react-router-dom";
+import { Outlet,Navigate, Link } from "react-router-dom";
 import NavMenu from "@/components/NavMenu";
 import {Slide, ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,7 +16,7 @@ const AppLayout = () => {
       <header className="bg-gray-800 py-5">
         <div className="max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center">
           <div className="flex">
-          <p className="font-bold text-5xl mt-3 text-gray-400">E -<span className="text-sky-700">Task</span></p>
+          <Link to={'/'} className="font-bold text-5xl mt-3 text-gray-400">E -<span className="text-sky-700">Task</span></Link>
           </div>
           <NavMenu 
             name={data.name}
