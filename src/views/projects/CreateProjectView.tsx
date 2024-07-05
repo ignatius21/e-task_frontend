@@ -43,7 +43,7 @@ const CreateProjectView = () => {
         <nav className="my-5">
           <Link
             to="/"
-            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+            className="beautiful-button"
           >
             Volver a Tareas
           </Link>
@@ -51,13 +51,13 @@ const CreateProjectView = () => {
         <form
           onSubmit={handleSubmit(handleForm)}
           noValidate
-          className="mt-10 bg-white shadow-lg p-10 rounded-lg"
+          className="mt-10 bg-white shadow-lg p-10 rounded-2xl"
         >
           <ProjectForm register={register} errors={errors} />
           <input
             type="submit"
             value={"Crear Tarea"}
-            className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors rounded-lg"
+            className="beautiful-button w-full mt-5"
           />
         </form>
       </div>
