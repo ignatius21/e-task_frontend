@@ -64,7 +64,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
             <input
               type="password"
               placeholder="Ingresar password"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password", {
                 required: "El Password es obligatorio",
                 minLength: {
@@ -80,7 +80,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordFocused ? "blue" : "currentColor"}
+              stroke={isPasswordFocused ? "MediumAquamarine" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
@@ -102,7 +102,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
               id="password_confirmation"
               type="password"
               placeholder="Repetir password"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10"
+              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password_confirmation", {
                 required: "Repetir Password es obligatorio",
                 validate: (value) =>
@@ -116,7 +116,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordConfirmationFocused ? "blue" : "currentColor"}
+              stroke={isPasswordConfirmationFocused ? "MediumAquamarine" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
