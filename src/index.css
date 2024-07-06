@@ -64,3 +64,11 @@
       background-position: right bottom;
     }
   }
+
+  .svg:hover .icon-profile {
+    stroke: rgb(90, 90, 223); /* Cambia esto al color azul que prefieras */
+  }
+
+  .svg-close:hover .icon-logout {
+    stroke: rgb(206, 75, 75); /* Cambia esto al color azul que prefieras */
+  }
