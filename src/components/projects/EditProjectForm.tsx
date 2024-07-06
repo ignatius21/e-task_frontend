@@ -51,13 +51,10 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
     <>
       <div className="max-w-3xl mx-auto">
         <h1 className="text-5xl font-black">Editar Tarea</h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">
-            Edita la tarea que desees
-        </p>
-        <nav className="my-5">
+        <nav className="mt-10">
           <Link
             to="/"
-            className="bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+            className="beautiful-button"
           >
             Volver a Tareas
           </Link>
@@ -65,13 +62,13 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
         <form
           onSubmit={handleSubmit(handleForm)}
           noValidate
-          className="mt-10 bg-white shadow-lg p-10 rounded-lg"
+          className="mt-10 bg-white shadow-lg p-10 rounded-2xl"
         >
           <ProjectForm register={register} errors={errors} />
           <input
             type="submit"
             value={"Guardar cambios"}
-            className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors rounded-lg"
+            className="beautiful-button w-full"
           />
         </form>
       </div>
