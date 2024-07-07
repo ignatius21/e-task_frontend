@@ -44,7 +44,7 @@ export default function ChangePasswordView() {
         <h1 className="text-5xl font-black ">Cambiar Password</h1>
         <form
           onSubmit={handleSubmit(handleChangePassword)}
-          className="mt-10 space-y-5 bg-white shadow-lg p-10 rounded-2xl"
+          className="mt-10 space-y-5 bg-white shadow-2xl p-10 rounded-3xl"
           noValidate
         >
           <div className="mb-5 space-y-3">
@@ -59,7 +59,7 @@ export default function ChangePasswordView() {
                 id="current_password"
                 type="password"
                 placeholder="Password Actual"
-                className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+                className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
                 {...register("current_password", {
                   required: "El password actual es obligatorio",
                 })}
@@ -95,7 +95,7 @@ export default function ChangePasswordView() {
                 id="password"
                 type="password"
                 placeholder="Nuevo Password"
-                className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+                className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
                 {...register("password", {
                   required: "El Nuevo Password es obligatorio",
                   minLength: {
@@ -137,7 +137,7 @@ export default function ChangePasswordView() {
                 id="password_confirmation"
                 type="password"
                 placeholder="Repetir Password"
-                className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+                className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
                 {...register("password_confirmation", {
                   required: "Este campo es obligatorio",
                   validate: (value) =>

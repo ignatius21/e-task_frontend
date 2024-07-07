@@ -55,7 +55,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
     <>
       <form
         onSubmit={handleSubmit(handleNewPassword)}
-        className="space-y-8 p-10  bg-white mt-10 rounded-2xl"
+        className="space-y-8 p-10  bg-white mt-10 rounded-3xl shadow-2xl"
         noValidate
       >
         <div className="flex flex-col gap-5">

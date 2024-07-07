@@ -45,7 +45,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
 
         <form
           onSubmit={handleSubmit(handleEditProfile)}
-          className="space-y-8 p-10 mt-10 bg-white rounded-2xl"
+          className="space-y-8 p-10 mt-10 bg-white rounded-3xl shadow-2xl"
           noValidate
         >
           <div className="mb-5 space-y-3">
@@ -57,7 +57,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                 id="name"
                 type="text"
                 placeholder="Tu Nombre"
-                className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+                className=" input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
                 {...register("name", {
                   required: "Nombre de usuario es obligatoro",
                 })}
@@ -91,7 +91,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                 id="text"
                 type="email"
                 placeholder="Tu Email"
-                className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+                className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
                 {...register("email", {
                   required: "EL e-mail es obligatorio",
                   pattern: {
@@ -107,7 +107,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
-                stroke={isEmailFocused ? "CornflowerBlue" : "currentColor"}
+                stroke={isEmailFocused ? "#BDE9D4" : "currentColor"}
                 className="absolute left-2 h-6 w-6 text-gray-400"
               >
                 <path
