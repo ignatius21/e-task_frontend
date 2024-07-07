@@ -18,14 +18,17 @@ import {ChevronDownIcon,} from "@heroicons/react/20/solid";
 import { useAuth } from "@/hooks/useAuth";
 
 import { Link, useNavigate } from "react-router-dom";
+import { useQueryClient } from "@tanstack/react-query";
 
 export default function NavbarMenu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { data } = useAuth();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const handleLogout = () => {
     localStorage.removeItem("AUTH_TOKEN");
+    queryClient.invalidateQueries({queryKey: ["user"]});
     navigate("/auth/login");
   };
 
@@ -37,8 +40,8 @@ export default function NavbarMenu() {
       >
         <div className="flex lg:flex-1">
           <Link to={"/"} className="-m-1.5 p-1.5">
-            <p className="font-bold text-2xl">
-              E-<span className="text-blue-800">Task</span>
+            <p className="font-bold text-4xl text-slate-500">
+              E-<span className="text-blue-300">Task</span>
             </p>
           </Link>
         </div>
