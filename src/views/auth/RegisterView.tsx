@@ -78,7 +78,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isEmailFocused ? "CornflowerBlue" : "currentColor"}
+              stroke={isEmailFocused ? "#BDDBE9" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
@@ -144,7 +144,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordFocused ? "MediumAquamarine" : "currentColor"}
+              stroke={isPasswordFocused ? "#BDE9D4" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path
@@ -180,7 +180,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isPasswordConfirmationFocused ? "MediumAquamarine" : "currentColor"}
+              stroke={isPasswordConfirmationFocused ? "#BDE9D4" : "currentColor"}
               className="absolute left-3 top-3 h-6 w-6 text-slate-400"
             >
               <path

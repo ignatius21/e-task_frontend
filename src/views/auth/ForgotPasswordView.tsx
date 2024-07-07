@@ -71,7 +71,7 @@ export default function ForgotPasswordView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isEmailFocused ? "CornflowerBlue" : "currentColor"}
+              stroke={isEmailFocused ? "#BDDBE9" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
