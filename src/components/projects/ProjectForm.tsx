@@ -24,7 +24,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
           <div className="relative flex items-center">
             <input
               id="projectName"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               type="text"
               placeholder="Ingrese el nombre de la tarea que desea crear"
               {...register("projectName", {
@@ -62,7 +62,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
           <div className="relative flex items-center">
             <input
               id="clientName"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               type="text"
               placeholder="Nombre del area a la que pertenece la tarea"
               {...register("clientName", {
@@ -99,7 +99,7 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
           <div className="relative flex items-center">
             <textarea
               id="description"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 resize-none focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 resize-none focus:ring-0"
               placeholder="Agregue una breve descripción de la tarea a realizar"
               {...register("description", {
                 required: "Una descripción de la tarea es obligatoria",
