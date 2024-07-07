@@ -46,7 +46,7 @@ export default function RegisterView() {
 
   return (
     <>
-      <h1 className="text-5xl font-black text-white">Crea tu cuenta</h1>
+      <h1 className="text-5xl font-black text-slate-700">Crea tu cuenta</h1>
       <form
         onSubmit={handleSubmit(handleRegister)}
         className="space-y-8 p-10 bg-white mt-10 rounded-2xl w-96"
@@ -208,7 +208,7 @@ export default function RegisterView() {
             className="text-center text-gray-400 font-normal"
           >
             Ya tienes una cuenta?{" "}
-            <span className="text-blue-500 font-bold">Inicia sesion</span>
+            <span className="text-gray-500 font-bold">Inicia sesion</span>
           </Link>
         </nav>
       </form>

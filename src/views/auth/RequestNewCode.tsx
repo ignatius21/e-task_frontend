@@ -34,17 +34,17 @@ export default function RegisterView() {
 
   return (
     <>
-      <h1 className="text-5xl font-black text-white">
+      <h1 className="text-5xl font-black text-slate-700">
         Solicitar Código de Confirmación
       </h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <p className="text-2xl font-light text-gray-500 mt-5">
         Coloca tu e-mail para recibir {""}
-        <span className=" text-fuchsia-500 font-bold"> un nuevo código</span>
+        <span className=" text-gray-500 font-bold"> un nuevo código</span>
       </p>
 
       <form
         onSubmit={handleSubmit(handleRequestCode)}
-        className="space-y-8 p-10 rounded-lg bg-white mt-10"
+        className="space-y-8 p-10 rounded-lg bg-white mt-10 shadow-lg"
         noValidate
       >
         <div className="flex flex-col gap-5">
@@ -78,13 +78,13 @@ export default function RegisterView() {
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to="/auth/login"
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-500 font-normal"
         >
           ¿Ya tienes cuenta? Iniciar Sesión
         </Link>
         <Link
           to="/auth/forgot-password"
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-slate-500 font-normal"
         >
           ¿Olvidaste tu contraseña? Reestablecer
         </Link>

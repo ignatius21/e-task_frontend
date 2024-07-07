@@ -37,10 +37,10 @@ export default function ForgotPasswordView() {
 
   return (
     <>
-      <h1 className="text-5xl font-black text-white">Reestablecer Password</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <h1 className="text-5xl font-black text-slate-700">Reestablecer Password</h1>
+      <p className="text-2xl font-light text-slate-700 mt-5">
         Completa el email para {""}
-        <span className=" text-blue-500 font-bold"> solicitar un nuevo password</span>
+        <span className=" text-gray-500 font-bold"> solicitar un nuevo password</span>
       </p>
       <form
         onSubmit={handleSubmit(handleForgotPassword)}
@@ -96,7 +96,7 @@ export default function ForgotPasswordView() {
             className="text-center text-gray-400 font-normal"
           >
             Ya tienes una cuenta?{" "}
-            <span className="text-blue-500 font-bold">Inicia sesion</span>
+            <span className="text-gray-500 font-bold">Inicia sesion</span>
           </Link>
         </nav>
       </form>

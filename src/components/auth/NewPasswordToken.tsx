@@ -36,7 +36,7 @@ export default function NewPasswordToken({token,setToken,setIsValidToken}: NewPa
 
   return (
     <>
-      <form className="space-y-8 p-10 rounded-lg bg-white mt-10">
+      <form className="space-y-8 p-10 rounded-lg bg-white mt-10 shadow-lg">
         <label className="font-normal text-2xl text-center block">
           Código de 6 dígitos
         </label>
@@ -58,9 +58,9 @@ export default function NewPasswordToken({token,setToken,setIsValidToken}: NewPa
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to="/auth/forgot-password"
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-500 font-normal"
         >
-          Solicitar un nuevo <span className="font-bold text-blue-500">Código</span>
+          Solicitar un nuevo <span className="font-bold text-slate-700">Código</span>
         </Link>
       </nav>
     </>

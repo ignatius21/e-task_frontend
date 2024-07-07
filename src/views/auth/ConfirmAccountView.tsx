@@ -35,12 +35,12 @@ export default function ConfirmAccountView() {
     
   return (
     <>
-      <h1 className="text-5xl font-black text-white">Confirma tu Cuenta</h1>
-      <p className="text-2xl font-light text-white mt-5">
+      <h1 className="text-5xl font-black text-slate-700">Confirma tu Cuenta</h1>
+      <p className="text-2xl font-light text-slate-500 mt-5">
         Ingresa el código que recibiste {""}
-        <span className=" text-blue-500 font-bold"> por e-mail</span>
+        <span className=" text-slate-500 font-bold"> por e-mail</span>
       </p>
-      <form className="space-y-8 p-10 bg-white mt-10 rounded-2xl">
+      <form className="space-y-8 p-10 bg-white mt-10 rounded-2xl shadow-lg">
         <label className="font-normal text-2xl text-center block">
           Código de 6 dígitos
         </label>
@@ -59,9 +59,9 @@ export default function ConfirmAccountView() {
       <nav className="mt-10 flex flex-col space-y-4">
         <Link
           to="/auth/request-code"
-          className="text-center text-gray-300 font-normal"
+          className="text-center text-gray-700 font-normal"
         >
-          Solicitar un nuevo <span className="font-bold text-blue-500">Código</span>
+          Solicitar un nuevo <span className="font-bold text-slate-500">Código</span>
         </Link>
       </nav>
     </>
