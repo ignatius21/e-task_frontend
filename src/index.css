@@ -6,7 +6,7 @@
 .beautiful-button {
     position: relative;
     display: inline-block;
-    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
+    background: linear-gradient(to bottom, #fce0e0, #f79a8d);
    /* Gradient background */
     color: rgb(255, 255, 255);
    /* White text color */
@@ -32,7 +32,7 @@
   
   /* Hover animation */
   .beautiful-button:hover {
-    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+    background: linear-gradient(to bottom, #f9dcdc, #fb8d8d);
     animation: button-particles 1s ease-in-out infinite;
     transform: translateY(-2px);
   }
