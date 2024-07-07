@@ -3,7 +3,7 @@ import { Slide, ToastContainer } from "react-toastify";
 
 function AuthLayout() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-primary">
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gradient">
       <div className="m-10">
         <Outlet />
       </div>
