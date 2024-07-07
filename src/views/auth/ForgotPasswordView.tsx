@@ -44,7 +44,7 @@ export default function ForgotPasswordView() {
       </p>
       <form
         onSubmit={handleSubmit(handleForgotPassword)}
-        className="space-y-8 p-10 mt-10 bg-white rounded-2xl"
+        className="space-y-8 p-10 mt-10 bg-white rounded-3xl shadow-2xl"
         noValidate
       >
         <div className="flex flex-col gap-5">
