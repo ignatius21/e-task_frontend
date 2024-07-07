@@ -6,7 +6,7 @@ const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowError(false);
-    }, 2000);
+    }, 3000);
 
     return () => {
       clearTimeout(timer);
@@ -15,7 +15,7 @@ const ErrorMessage = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`rounded-2xl text-center my-2 bg-blue-300 text-white font-bold p-3 uppercase text-sm ${
+      className={`rounded-2xl text-center my-2 bg-sky-300 bg-gradient text-white font-bold p-3 uppercase text-sm ${
         showError ? "" : "hidden"
       }`}
     >
