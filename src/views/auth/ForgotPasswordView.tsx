@@ -55,7 +55,7 @@ export default function ForgotPasswordView() {
               id="email"
               type="email"
               placeholder="Email de Registro"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("email", {
                 required: "El Email es obligatorio",
                 pattern: {

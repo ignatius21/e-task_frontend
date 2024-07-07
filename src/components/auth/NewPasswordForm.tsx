@@ -64,7 +64,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
             <input
               type="password"
               placeholder="Ingresar password"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password", {
                 required: "El Password es obligatorio",
                 minLength: {
@@ -102,7 +102,7 @@ export default function NewPasswordForm({ token }: NewPasswordFormProps) {
               id="password_confirmation"
               type="password"
               placeholder="Repetir password"
-              className="w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
+              className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               {...register("password_confirmation", {
                 required: "Repetir Password es obligatorio",
                 validate: (value) =>
