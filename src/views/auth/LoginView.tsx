@@ -131,7 +131,7 @@ export default function LoginView() {
 
         <button
           type="submit"
-          className="beautiful-button w-full cursor-pointer"
+          className="beautiful-button2 w-full cursor-pointer"
         >
           Iniciar sesion
         </button>

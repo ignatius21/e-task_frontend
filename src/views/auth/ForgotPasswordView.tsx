@@ -86,7 +86,7 @@ export default function ForgotPasswordView() {
 
         <button
           type="submit"
-          className="beautiful-button w-full cursor-pointer"
+          className="beautiful-button2 w-full cursor-pointer"
         >
           Enviar instrucciones
         </button>

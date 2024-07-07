@@ -41,7 +41,7 @@ const DashboardView = () => {
       <nav className="my-5">
         <Link
           to="/projects/create"
-          className="beautiful-button"
+          className="beautiful-button2"
         >
           Nueva orden de trabajo
         </Link>

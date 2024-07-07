@@ -171,7 +171,7 @@ export default function ChangePasswordView() {
           <input
             type="submit"
             value="Cambiar Password"
-            className="beautiful-button w-full flex"
+            className="beautiful-button2 w-full flex"
           />
         </form>
       </div>

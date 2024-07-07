@@ -40,7 +40,7 @@ const CreateProjectView = () => {
         <nav className="my-5">
           <Link
             to="/"
-            className="beautiful-button"
+            className="beautiful-button2"
           >
             Volver a Tareas
           </Link>
@@ -54,7 +54,7 @@ const CreateProjectView = () => {
           <input
             type="submit"
             value={"Crear Tarea"}
-            className="beautiful-button w-full mt-5"
+            className="beautiful-button2 w-full mt-5"
           />
         </form>
       </div>

@@ -124,7 +124,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
           <button
             type="submit"
             value="Guardar Cambios"
-            className="beautiful-button w-full"
+            className="beautiful-button2 w-full"
           >
             Guardar Cambios
           </button>
