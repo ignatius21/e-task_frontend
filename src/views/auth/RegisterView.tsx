@@ -109,7 +109,7 @@ export default function RegisterView() {
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
-              stroke={isUserFocused ? "IndianRed" : "currentColor"}
+              stroke={isUserFocused ? "#F4B9B9" : "currentColor"}
               className="absolute left-2 h-6 w-6 text-gray-400"
             >
               <path
