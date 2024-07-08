@@ -111,7 +111,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <Link
                               to={`/project/${project._id}/edit`}
-                              className="block px-3 py-1 text-sm leading-6 text-gray-900"
+                              className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold"
                             >
                               Editar Proyecto
                             </Link>
@@ -119,7 +119,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <button
                               type="button"
-                              className="block px-3 py-1 text-sm leading-6 text-red-500"
+                              className="block px-3 py-1 text-sm leading-6 text-red-500 font-bold"
                               onClick={() => navigate(location.pathname + `?deleteProject=${project._id}`)}
                             >
                               Eliminar Proyecto
