@@ -3,67 +3,7 @@
 @tailwind utilities;
 
 
-.beautiful-button {
-    position: relative;
-    display: inline-block;
-    background: linear-gradient(to bottom, #fce0e0, #f79a8d);
-   /* Gradient background */
-    color: rgb(255, 255, 255);
-   /* White text color */
-    font-family: "Segoe UI", sans-serif;
-   /* Stylish and legible font */
-    font-weight: bold;
-    font-size: 18px;
-   /* Large font size */
-    border: none;
-   /* No border */
-    border-radius: 30px;
-   /* Rounded corners */
-    padding: 14px 28px;
-   /* Large padding */
-    cursor: pointer;
-   /* Cursor on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   /* Subtle shadow */
-    animation: button-shimmer 2s infinite;
-    transition: all 0.3s ease-in-out;
-   /* Smooth transition */
-  }
-  
-  /* Hover animation */
-  .beautiful-button:hover {
-    background: linear-gradient(to bottom, #f9dcdc, #fb8d8d);
-    animation: button-particles 1s ease-in-out infinite;
-    transform: translateY(-2px);
-  }
-  
-  /* Click animation */
-  .beautiful-button:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Shimmer animation */
-  @keyframes button-shimmer {
-    0% {
-      background-position: left top;
-    }
-  
-    100% {
-      background-position: right bottom;
-    }
-  }
-  
-  /* Particle animation */
-  @keyframes button-particles {
-    0% {
-      background-position: left top;
-    }
-  
-    100% {
-      background-position: right bottom;
-    }
-  }
+
 
   .beautiful-button2 {
     position: relative;
@@ -137,4 +77,68 @@
 
   .input:focus{
     border-color: rgb(189, 188, 188);
+  }
+
+
+  
+  .beautiful-button3 {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #880404db, #db5440);
+   /* Gradient background */
+    color: rgb(255, 255, 255);
+   /* White text color */
+    font-family: "Segoe UI", sans-serif;
+   /* Stylish and legible font */
+    font-weight: bold;
+    font-size: 18px;
+   /* Large font size */
+    border: none;
+   /* No border */
+    border-radius: 30px;
+   /* Rounded corners */
+    padding: 14px 28px;
+   /* Large padding */
+    cursor: pointer;
+   /* Cursor on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   /* Subtle shadow */
+    animation: button-shimmer 2s infinite;
+    transition: all 0.3s ease-in-out;
+   /* Smooth transition */
+  }
+  
+  /* Hover animation */
+  .beautiful-button3:hover {
+    background: linear-gradient(to bottom, #6e0606, #ab2828);
+    animation: button-particles 1s ease-in-out infinite;
+    transform: translateY(-2px);
+  }
+  
+  /* Click animation */
+  .beautiful-button3:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Shimmer animation */
+  @keyframes button-shimmer {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
+  }
+  
+  /* Particle animation */
+  @keyframes button-particles {
+    0% {
+      background-position: left top;
+    }
+  
+    100% {
+      background-position: right bottom;
+    }
   }
