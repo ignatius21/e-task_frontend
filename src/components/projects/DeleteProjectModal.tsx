@@ -137,7 +137,7 @@ const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
                   <input
                     type="submit"
-                    className="beautiful-button3 w-full"
+                    className="alert-button w-full"
                     value="Eliminar Proyecto"
                   />
                 </form>

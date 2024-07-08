@@ -81,7 +81,7 @@
 
 
   
-  .beautiful-button3 {
+  .alert-button {
     position: relative;
     display: inline-block;
     background: linear-gradient(to bottom, #880404db, #db5440);
@@ -109,14 +109,14 @@
   }
   
   /* Hover animation */
-  .beautiful-button3:hover {
+  .alert-button:hover {
     background: linear-gradient(to bottom, #6e0606, #ab2828);
     animation: button-particles 1s ease-in-out infinite;
     transform: translateY(-2px);
   }
   
   /* Click animation */
-  .beautiful-button3:active {
+  .alert-button:active {
     transform: scale(0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   }
