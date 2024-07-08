@@ -40,7 +40,7 @@ export default function ConfirmAccountView() {
         Ingresa el código que recibiste {""}
         <span className=" text-slate-500 font-bold"> por e-mail</span>
       </p>
-      <form className="space-y-8 p-10 bg-white mt-10 rounded-2xl shadow-lg">
+      <form className="space-y-8 p-10 bg-white mt-10 rounded-3xl shadow-2xl">
         <label className="font-normal text-2xl text-center block">
           Código de 6 dígitos
         </label>
