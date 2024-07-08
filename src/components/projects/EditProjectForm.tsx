@@ -54,7 +54,7 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
         <nav className="mt-10">
           <Link
             to="/"
-            className="beautiful-button"
+            className="beautiful-button2"
           >
             Volver a Tareas
           </Link>
@@ -68,7 +68,7 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
           <input
             type="submit"
             value={"Guardar cambios"}
-            className="beautiful-button w-full"
+            className="beautiful-button2 w-full"
           />
         </form>
       </div>
