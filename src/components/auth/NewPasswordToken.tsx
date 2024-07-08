@@ -36,7 +36,7 @@ export default function NewPasswordToken({token,setToken,setIsValidToken}: NewPa
 
   return (
     <>
-      <form className="space-y-8 p-10 rounded-lg bg-white mt-10 shadow-lg">
+      <form className="space-y-8 p-10 rounded-3xl bg-white mt-10 shadow-2xl">
         <label className="font-normal text-2xl text-center block">
           Código de 6 dígitos
         </label>
