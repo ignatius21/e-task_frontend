@@ -71,7 +71,7 @@ const DashboardView = () => {
                   <p
                     className={`font-bold ${
                       project.manager === user?._id
-                        ? "bg-red-500 rounded-3xl px-3 text-white py-2"
+                        ? "bg-red rounded-3xl px-3 text-white py-2"
                         : "bg-green-400 rounded-lg px-2 text-gray-700 py-1"
                     }`}
                   >
@@ -111,7 +111,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <Link
                               to={`/project/${project._id}/edit`}
-                              className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold hover:text-[#67ca9a]"
+                              className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold hover:text-green"
                             >
                               Editar Proyecto
                             </Link>
@@ -119,7 +119,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <button
                               type="button"
-                              className="block px-3 py-1 text-sm leading-6 text-gray-400 hover:text-red-400 font-bold"
+                              className="block px-3 py-1 text-sm leading-6 text-gray-400 hover:text-red font-bold"
                               onClick={() => navigate(location.pathname + `?deleteProject=${project._id}`)}
                             >
                               Eliminar Proyecto

@@ -6,6 +6,8 @@ export default {
     extend: {
       colors: {
         primary: "#040A26",
+        red: "#FC6262",
+        green:"#A9E7B1"
       },
       backgroundImage: {
         gradient:

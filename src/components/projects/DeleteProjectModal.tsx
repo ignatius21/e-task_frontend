@@ -82,15 +82,15 @@ const [isPasswordFocused, setIsPasswordFocused] = useState(false);
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                <DialogTitle as="h3" className="text-gray-800 font-bold text-4xl  my-5">
+              <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                <DialogTitle as="h3" className="text-gray-700 font-bold text-4xl  my-5">
                   Eliminar Proyecto{" "}
                 </DialogTitle>
 
                 <p className="text-xl text-red-500 font-bold">
-                  Confirma la eliminación del proyecto {""}
+                  Confirma la <span className="text-red">eliminación</span> del proyecto {""}
                   <span className="text-gray-700">
-                    colocando tu password
+                    colocando tu <span className="text-slate-500">password</span>
                   </span>
                 </p>
 
