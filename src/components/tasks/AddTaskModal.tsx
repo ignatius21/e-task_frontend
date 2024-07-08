@@ -80,18 +80,18 @@ export default function AddTaskModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                  <DialogTitle as="h3" className="font-black text-4xl  my-5">
+                <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl bg-white text-left align-middle shadow-xl transition-all p-16">
+                  <DialogTitle as="h3" className="text-gray-700 font-bold text-4xl my-5">
                     Nueva Tarea
                   </DialogTitle>
 
-                  <p className="text-xl font-bold">
+                  <p className="text-xl font-bold text-gray-400">
                     Llena el formulario y crea {""}
-                    <span className="text-fuchsia-600">una tarea</span>
+                    <span className="text-slate-800">una tarea</span>
                   </p>
                   <form className='mt-10 space-y-3' noValidate onSubmit={handleSubmit(handleCreateTask)}>
                     <TaskForm register={register} errors={errors}/>
-                    <input type="submit" className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3 text-white uppercase font-bold cursor-pointer transition-colors rounded-lg" value='Guardar Tarea'/>
+                    <input type="submit" className="beautiful-button2 w-full" value='Guardar Tarea'/>
                   </form>
                 </DialogPanel>
               </TransitionChild>
