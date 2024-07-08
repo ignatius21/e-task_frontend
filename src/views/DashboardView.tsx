@@ -71,7 +71,7 @@ const DashboardView = () => {
                   <p
                     className={`font-bold ${
                       project.manager === user?._id
-                        ? "bg-red-400 rounded-lg px-2 text-white py-1"
+                        ? "bg-red-500 rounded-3xl px-3 text-white py-2"
                         : "bg-green-400 rounded-lg px-2 text-gray-700 py-1"
                     }`}
                   >
