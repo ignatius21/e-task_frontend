@@ -83,7 +83,7 @@ const DashboardView = () => {
                 <>
                   <div className="flex shrink-0 items-center gap-x-6">
                     <Menu as="div" className="relative flex-none">
-                      <MenuButton className="-m-2.5 block p-2.5 text-gray-500 hover:text-gray-900">
+                      <MenuButton className="-m-2.5 block p-2.5 text-gray-500 hover:text-sky-500">
                         <span className="sr-only">opciones</span>
                         <EllipsisVerticalIcon
                           className="h-9 w-9"
@@ -111,7 +111,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <Link
                               to={`/project/${project._id}/edit`}
-                              className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold"
+                              className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold hover:text-[#67ca9a]"
                             >
                               Editar Proyecto
                             </Link>
@@ -119,7 +119,7 @@ const DashboardView = () => {
                           <MenuItem>
                             <button
                               type="button"
-                              className="block px-3 py-1 text-sm leading-6 text-red-500 font-bold"
+                              className="block px-3 py-1 text-sm leading-6 text-gray-400 hover:text-red-400 font-bold"
                               onClick={() => navigate(location.pathname + `?deleteProject=${project._id}`)}
                             >
                               Eliminar Proyecto
