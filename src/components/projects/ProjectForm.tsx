@@ -19,16 +19,16 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
       <>
         <div className="mb-5 space-y-3">
           <label htmlFor="projectName" className="text-sm uppercase font-bold">
-            tarea
+            Trabajo
           </label>
           <div className="relative flex items-center">
             <input
               id="projectName"
               className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               type="text"
-              placeholder="Ingrese el nombre de la tarea que desea crear"
+              placeholder="Ingrese el nombre del trabajo que desea crear"
               {...register("projectName", {
-                required: "El Titulo de la tarea es obligatorio",
+                required: "Titulo del trabajo obligatorio",
               })}
               onFocus={() => setIsTaskFocused(true)}
               onBlur={() => setIsTaskFocused(false)}
@@ -64,9 +64,9 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
               id="clientName"
               className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 focus:ring-0"
               type="text"
-              placeholder="Nombre del area a la que pertenece la tarea"
+              placeholder="Nombre del area a la que pertenece el trabajo"
               {...register("clientName", {
-                required: "El Nombre del area es obligatorio",
+                required: "Nombre del trabajo obligatorio",
               })}
               onFocus={() => setIsAreaFocused(true)}
               onBlur={() => setIsAreaFocused(false)}
@@ -100,9 +100,9 @@ export default function ProjectForm({register, errors}: ProjectFormProps) {
             <textarea
               id="description"
               className="input w-full p-3 border-slate-200 border rounded-2xl pl-10 resize-none focus:ring-0"
-              placeholder="Agregue una breve descripción de la tarea a realizar"
+              placeholder="Agregue una breve descripción del trabajo a realizar"
               {...register("description", {
-                required: "Una descripción de la tarea es obligatoria",
+                required: "Descripción del trabajo obligatorio",
               })}
               onFocus={() => setIsDescriptionFocused(true)}
               onBlur={() => setIsDescriptionFocused(false)}
