@@ -59,13 +59,13 @@ export default function ProjectTeamView() {
         </nav>
         <h2 className="text-5xl text-slate-600 my-10">Miembros actuales</h2>
         {data.length ? (
-          <ul
+          <div
             role="list"
-            className="divide-y divide-gray-100 border border-gray-100 mt-10 bg-white shadow-lg"
+            className="flex bg-white rounded-3xl p-5 shadow-2xl flex-col gap-5"
           >
             {data?.map((member) => (
-              <li key={member._id} className="flex justify-between gap-x-6 px-5 py-10">
-                <div className="flex min-w-0 gap-x-4">
+              <div key={member._id} className="flex">
+                <div className="w-full flex-col m-6 ">
                   <div className="min-w-0 flex-auto space-y-2">
                     <p className="text-2xl font-black text-gray-600">{member.name}</p>
                     <p className="text-sm text-gray-400">{member.email}</p>
@@ -93,7 +93,7 @@ export default function ProjectTeamView() {
                         <MenuItem>
                           <button
                             type="button"
-                            className="block px-3 py-1 text-sm leading-6 text-red-500"
+                            className="block px-3 py-1 text-sm leading-6 text-slate-500 font-bold hover:text-red"
                             onClick={() => mutate({projectId, userId: member._id})}
                           >
                             Eliminar del Proyecto
@@ -103,9 +103,9 @@ export default function ProjectTeamView() {
                     </Transition>
                   </Menu>
                 </div>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         ) : (
           <p className="text-center py-20 text-gray-500">No hay miembros en este equipo</p>
         )}
