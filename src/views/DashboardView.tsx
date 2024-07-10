@@ -48,16 +48,25 @@ const DashboardView = () => {
                 <div className="bg-white rounded-3xl p-5 shadow-2xl flex mb-5">
                   {/* Columna de información del proyecto */}
                   <div className="flex-1">
-                    <Link to={`/projects/${project._id}`}>
-                      <h2 className="text-2xl font-bold">
+                    <div className="flex p-2 items-center gap-3">
+                      <p className="text-2xl text-slate-600 font-bold">Nombre de la tarea:</p>
+                    <Link to={`/projects/${project._id}`} className="hover:text-sky-400">
+                      <h2 className="text-2xl font-bold text-sky-600">
                         {project.projectName}
                       </h2>
                     </Link>
-                    <p className="text-gray-500">{project.clientName}</p>
-                    <p className="text-gray-500">{project.description}</p>
+                    </div>
+                    <div className=" flex items-center p-2 gap-3">
+                      <p className="text-2xl font-bold text-slate-600">Area:</p>
+                      <h2 className="text-2xl font-bold text-sky-600">{project.clientName}</h2>
+                    </div>
+                    <div className="flex items-center p-2 gap-3">
+                      <p className="text-2xl font-bold text-slate-600">Descripción:</p>
+                      <h2 className="text-2xl font-bold text-sky-600">{project.description}</h2>
+                    </div>
                     <div className="flex min-w-0">
                       <div
-                        className={`font-bold ${
+                        className={`font-bold mt-10 ${
                           project.manager === user?._id
                             ? "bg-red rounded-3xl px-3 text-white py-2"
                             : "bg-sky-500 rounded-3xl px-3 text-white py-2"
