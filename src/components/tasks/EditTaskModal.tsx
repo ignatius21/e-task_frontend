@@ -92,13 +92,13 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
               leaveTo="opacity-0 scale-95"
             >
               <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                <DialogTitle as="h3" className="font-black text-4xl  my-5">
+                <DialogTitle as="h3" className="text-gray-500 font-bold text-4xl  my-5">
                   Editar Tarea
                 </DialogTitle>
 
                 <p className="text-xl font-bold">
                   Realiza cambios a una tarea en {""}
-                  <span className="text-fuchsia-600">este formulario</span>
+                  <span className="text-slate-400">este formulario</span>
                 </p>
 
                 <form
@@ -109,8 +109,8 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                   <TaskForm register={register} errors={errors} />
                   <input
                     type="submit"
-                    className=" bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
-                    value="Guardar Tarea"
+                    className="beautiful-button2 w-full cursor-pointer"
+                    value="Guardar Cambios"
                   />
                 </form>
               </DialogPanel>
