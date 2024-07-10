@@ -50,13 +50,13 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
   return (
     <>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl font-black">Editar Tarea</h1>
+        <h1 className="text-5xl font-black">Editar Trabajo</h1>
         <nav className="mt-10">
           <Link
             to="/"
             className="beautiful-button2"
           >
-            Volver a Tareas
+            Volver a Trabajos
           </Link>
         </nav>
         <form
