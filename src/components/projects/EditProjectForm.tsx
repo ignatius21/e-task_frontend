@@ -62,7 +62,7 @@ export default function EditProjectForm({data,projectId}: EditProjectFormData) {
         <form
           onSubmit={handleSubmit(handleForm)}
           noValidate
-          className="mt-10 bg-white shadow-lg p-10 rounded-2xl"
+          className="mt-10 bg-white shadow-2xl p-10 rounded-3xl"
         >
           <ProjectForm register={register} errors={errors} />
           <input
