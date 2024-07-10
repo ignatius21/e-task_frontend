@@ -91,7 +91,7 @@ export default function AddTaskModal() {
                   </p>
                   <form className='mt-10 space-y-3' noValidate onSubmit={handleSubmit(handleCreateTask)}>
                     <TaskForm register={register} errors={errors}/>
-                    <input type="submit" className="beautiful-button2 w-full" value='Guardar Tarea'/>
+                    <input type="submit" className="beautiful-button2 w-full" value='Crear Tarea'/>
                   </form>
                 </DialogPanel>
               </TransitionChild>
