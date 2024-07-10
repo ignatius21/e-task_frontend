@@ -32,13 +32,13 @@ const DashboardView = () => {
   if (data)
     return (
       <>
-        <h1 className="text-5xl text-slate-600 font-bold">Mis Tareas</h1>
+        <h1 className="text-5xl text-slate-600 font-bold">Mis Trabajos</h1>
         <p className="text-2xl font-light text-gray-500 mt-5">
           Maneje y administre sus trabajos
         </p>
         <nav className="my-5">
           <Link to="/projects/create" className="beautiful-button2">
-            Nueva tarea
+            Nuevo Trabajo
           </Link>
         </nav>
         {data.length ? (
@@ -49,7 +49,7 @@ const DashboardView = () => {
                   {/* Columna de información del proyecto */}
                   <div className="flex-1">
                     <div className="flex p-2 items-center gap-3">
-                      <p className="text-2xl text-slate-600 font-bold">Nombre de la tarea:</p>
+                      <p className="text-2xl text-slate-600 font-bold">Nombre del trabajo:</p>
                     <Link to={`/projects/${project._id}`} className="hover:text-sky-400">
                       <h2 className="text-2xl font-bold text-sky-600">
                         {project.projectName}
@@ -138,7 +138,7 @@ const DashboardView = () => {
                                 to={`/project/${project._id}/edit`}
                                 className="block px-3 py-1 text-sm leading-6 text-gray-400 font-bold hover:text-sky-500"
                               >
-                                Editar Proyecto
+                                Editar Trabajo
                               </Link>
                             </MenuItem>
                             <MenuItem>
@@ -152,7 +152,7 @@ const DashboardView = () => {
                                   )
                                 }
                               >
-                                Eliminar Proyecto
+                                Eliminar Trabajo
                               </button>
                             </MenuItem>
                           </MenuItems>
