@@ -14,7 +14,7 @@ const AppLayout = () => {
   if (data)
     return (
       <>
-        <div className="bg-gradient w-full h-screen">
+        <div className="bg-gradient w-full h-full">
           <header className="">
             <NavbarMenu />
           </header>
