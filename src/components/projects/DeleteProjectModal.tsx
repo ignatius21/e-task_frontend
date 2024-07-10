@@ -88,7 +88,7 @@ const [isPasswordFocused, setIsPasswordFocused] = useState(false);
                 </DialogTitle>
 
                 <p className="text-xl text-red-500 font-bold">
-                  Confirma la <span className="text-red">eliminación</span> del proyecto {""}
+                  Confirma la <span className="text-red">eliminación</span> del trabajo {""}
                   <span className="text-gray-700">
                     colocando tu <span className="text-slate-500">password</span>
                   </span>
@@ -138,7 +138,7 @@ const [isPasswordFocused, setIsPasswordFocused] = useState(false);
                   <input
                     type="submit"
                     className="alert-button w-full"
-                    value="Eliminar Proyecto"
+                    value="Eliminar Trabajo"
                   />
                 </form>
               </DialogPanel>
