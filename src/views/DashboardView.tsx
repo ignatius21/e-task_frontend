@@ -38,7 +38,7 @@ const DashboardView = () => {
         </p>
         <nav className="my-5">
           <Link to="/projects/create" className="beautiful-button2">
-            Nueva orden de trabajo
+            Nueva tarea
           </Link>
         </nav>
         {data.length ? (
