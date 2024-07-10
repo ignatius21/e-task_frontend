@@ -41,8 +41,8 @@ export default function SearchResult({user, reset}:SearchResultProps) {
     <>
       <p className="text-center mt-10 font-bold">
         <div className="flex justify-between items-center">
-          <p>{user.name}</p>
-          <button className="text-purple-600 hover:bg-purple-100 px-10 py-3 font-bold cursor-pointer" onClick={handleAddUser}>
+          <p className="text-3xl text-slate-500 capitalize">{user.name}</p>
+          <button className="beautiful-button2 cursor-pointer" onClick={handleAddUser}>
             Agregar al Proyecto
           </button>
         </div>
