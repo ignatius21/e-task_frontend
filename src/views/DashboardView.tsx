@@ -75,26 +75,25 @@ const DashboardView = () => {
                   {/* Columna de información del proyecto */}
                   <div className="flex-1 z-3">
                     <div className="flex p-2 items-center gap-3">
-                      <p className="text-2xl text-slate-600 font-bold">
+                      <p className="text-2xl text-slate-600 ">
                         Nombre del trabajo:
                       </p>
                       <Link
                         to={`/projects/${project._id}`}
-                        className="hover:text-sky-400"
                       >
-                        <h2 className="text-2xl font-bold text-sky-600">
+                        <h2 className="text-2xl font-bold text-sky-600 hover:text-fuchsia-700">
                           {project.projectName}
                         </h2>
                       </Link>
                     </div>
                     <div className=" flex items-center p-2 gap-3">
-                      <p className="text-2xl font-bold text-slate-600">Area:</p>
+                      <p className="text-2xl  text-slate-600">Area:</p>
                       <h2 className="text-2xl font-bold text-sky-600">
                         {project.clientName}
                       </h2>
                     </div>
                     <div className="flex items-center p-2 gap-3">
-                      <p className="text-2xl font-bold text-slate-600">
+                      <p className="text-2xl  text-slate-600">
                         Descripción:
                       </p>
                       <h2 className="text-2xl font-bold text-sky-600">
