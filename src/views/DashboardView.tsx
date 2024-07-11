@@ -32,11 +32,11 @@ const DashboardView = () => {
   if (data)
     return (
       <>
-        <h1 className="text-5xl text-slate-600 font-bold">Mis Trabajos</h1>
-        <p className="text-2xl font-light text-gray-500 mt-5">
+        <h1 className="text-5xl text-gray-500">Mis Trabajos</h1>
+        <p className="text-2xl font-light text-gray-400 mt-4">
           Maneje y administre sus trabajos
         </p>
-        <nav className="my-5">
+        <nav className="my-9">
           <Link to="/projects/create" className="beautiful-button2">
             Nuevo Trabajo
           </Link>

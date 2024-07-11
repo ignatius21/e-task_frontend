@@ -36,7 +36,7 @@ const CreateProjectView = () => {
   return (
     <>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl font-black">Crear trabajo nuevo</h1>
+        <h1 className="text-5xl text-gray-500">Crear nuevo trabajo</h1>
         <nav className="my-5">
           <Link
             to="/"
@@ -53,7 +53,7 @@ const CreateProjectView = () => {
           <ProjectForm register={register} errors={errors} />
           <input
             type="submit"
-            value={"Crear Trabajo"}
+            value={"Crear"}
             className="beautiful-button2 w-full mt-5"
           />
         </form>

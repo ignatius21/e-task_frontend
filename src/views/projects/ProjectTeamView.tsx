@@ -37,7 +37,7 @@ export default function ProjectTeamView() {
   if (data)
     return (
       <>
-        <h1 className="text-5xl text-slate-700 font-bold">Administrar Equipo</h1>
+        <h1 className="text-5xl text-slate-700">Administrar Equipo</h1>
         <p className="text-2xl font-light text-gray-500 mt-2">
           Administra los colaboradores del proyecto
         </p>

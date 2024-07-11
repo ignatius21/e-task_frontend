@@ -81,7 +81,7 @@ export default function AddTaskModal() {
                 leaveTo="opacity-0 scale-95"
               >
                 <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                  <DialogTitle as="h3" className="text-gray-700 font-bold text-4xl my-5">
+                  <DialogTitle as="h3" className="text-gray-500  text-4xl my-5">
                     Nueva Tarea
                   </DialogTitle>
                   <form className='mt-7 space-y-3' noValidate onSubmit={handleSubmit(handleCreateTask)}>

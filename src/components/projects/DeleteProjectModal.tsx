@@ -83,8 +83,8 @@ const [isPasswordFocused, setIsPasswordFocused] = useState(false);
               leaveTo="opacity-0 scale-95"
             >
               <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                <DialogTitle as="h3" className="text-gray-700 font-bold text-4xl  my-5">
-                  Eliminar Proyecto{" "}
+                <DialogTitle as="h3" className="text-gray-500 text-4xl my-5">
+                  Eliminar Trabajo{" "}
                 </DialogTitle>
 
                 <p className="text-xl text-red-500 font-bold">

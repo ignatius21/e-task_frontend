@@ -28,7 +28,7 @@ const ProjectDetailView = () => {
     if(isError) return <Navigate to='/404'/>
     if(data && user) return (
       <>
-        <h1 className="text-5xl font-black">{data.projectName}</h1>
+        <h1 className="text-5xl text-gray-600">{data.projectName}</h1>
         <p className="text-2xl font-light text-gray-500">{data.description}</p>
 
         {isManager(data.manager, user._id) && (

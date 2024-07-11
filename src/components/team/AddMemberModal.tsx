@@ -43,7 +43,7 @@ export default function AddMemberModal() {
                 leaveTo="opacity-0 scale-95"
               >
                 <DialogPanel className="w-full max-w-4xl transform overflow-hidden rounded-3xl bg-white text-left align-middle shadow-xl transition-all p-16">
-                  <DialogTitle as="h3" className="text-gray-500 text-4xl font-bold my-5">
+                  <DialogTitle as="h3" className="text-gray-500 text-4xl my-5">
                     Agregar Integrante al equipo
                   </DialogTitle>
                   <AddMemberForm />
