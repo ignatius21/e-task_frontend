@@ -143,5 +143,23 @@
     }
   }
 
-  
+  .custom-shape-divider-top-1720689138 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1720689138 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 249px;
+}
+
+.custom-shape-divider-top-1720689138 .shape-fill {
+    fill: #deeaf7;
+}
   
