@@ -96,11 +96,6 @@ export default function EditTaskModal({ data, taskId }: EditTaskModalProps) {
                   Editar Tarea
                 </DialogTitle>
 
-                <p className="text-xl font-bold">
-                  Realiza cambios a una tarea en {""}
-                  <span className="text-slate-400">este formulario</span>
-                </p>
-
                 <form
                   className="mt-10 space-y-3"
                   noValidate

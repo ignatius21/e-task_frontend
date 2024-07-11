@@ -84,12 +84,7 @@ export default function AddTaskModal() {
                   <DialogTitle as="h3" className="text-gray-700 font-bold text-4xl my-5">
                     Nueva Tarea
                   </DialogTitle>
-
-                  <p className="text-xl font-bold text-gray-400">
-                    Llena el formulario y crea {""}
-                    <span className="text-slate-800">una tarea</span>
-                  </p>
-                  <form className='mt-10 space-y-3' noValidate onSubmit={handleSubmit(handleCreateTask)}>
+                  <form className='mt-7 space-y-3' noValidate onSubmit={handleSubmit(handleCreateTask)}>
                     <TaskForm register={register} errors={errors}/>
                     <input type="submit" className="beautiful-button2 w-full" value='Crear Tarea'/>
                   </form>

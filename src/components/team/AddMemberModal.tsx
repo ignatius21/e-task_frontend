@@ -46,12 +46,6 @@ export default function AddMemberModal() {
                   <DialogTitle as="h3" className="text-gray-500 text-4xl font-bold my-5">
                     Agregar Integrante al equipo
                   </DialogTitle>
-                  <p className="text-xl text-slate-500">
-                    Busca el nuevo integrante por email {""}
-                    <span className="text-slate-800 font-bold">
-                      para agregarlo al proyecto
-                    </span>
-                  </p>
                   <AddMemberForm />
                 </DialogPanel>
               </TransitionChild>
