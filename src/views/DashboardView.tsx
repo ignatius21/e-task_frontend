@@ -47,7 +47,7 @@ const DashboardView = () => {
               {data.map((project) => (
                 <div className="bg-white rounded-3xl p-5 shadow-2xl flex mb-5 relative">
                   <div className="">
-                    <div className="custom-shape-divider-top-1720689138 relative">
+                    <div className="custom-shape-divider-top-1720689138 relative rounded-3xl">
                       <svg
                         data-name="Layer 1"
                         xmlns="http://www.w3.org/2000/svg"
