@@ -208,7 +208,7 @@ export default function RegisterView() {
             className="text-center text-gray-400 font-normal"
           >
             Ya tienes una cuenta?{" "}
-            <span className="text-gray-500 font-bold">Inicia sesion</span>
+            <span className="text-gray-500 font-bold hover:text-sky-500">Inicia sesion</span>
           </Link>
         </nav>
       </form>

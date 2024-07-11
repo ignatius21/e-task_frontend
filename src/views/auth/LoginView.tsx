@@ -126,7 +126,7 @@ export default function LoginView() {
           className=" text-gray-400 font-normal"
         >
           Olvidaste tu password?{" "}
-          <span className="text-gray-500 font-bold ">Reestablecelo</span>
+          <span className="text-gray-500 font-bold hover:text-sky-500">Reestablecelo</span>
         </Link>
 
         <button
@@ -142,7 +142,7 @@ export default function LoginView() {
             className="text-center text-gray-400 font-normal"
           >
             No tienes una cuenta?{" "}
-            <span className="text-gray-500 font-bold ">Crea una</span>
+            <span className="text-gray-500 font-bold hover:text-sky-500">Crea una</span>
           </Link>
         </nav>
       </form>
