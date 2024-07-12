@@ -88,7 +88,7 @@ export default function TaskList({ tasks, canEdit }: TaskListProps) {
           {Object.entries(groupedTasks).map(([status, tasks]) => (
             <div key={status} className="w-full flex flex-col">
               <h3
-                className={`capitalize text-xl border-t-8 font-bold bg-white justify-center flex ${statusColors[status]}`}
+                className={`uppercase text-slate-500 text-xl border-t-8 font-bold bg-white justify-center flex rounded-md shadow-xl p-3 ${statusColors[status]}`}
               >
                 {statusTranslations[status]}
               </h3>
