@@ -26,11 +26,11 @@ const initialStatusGroups: GroupedTasks = {
 };
 
 const statusColors: { [key: string]: string } = {
-  pending: "border-t-red-500",
-  inProgress: "border-t-blue-500",
-  completed: "border-t-green-500",
-  onHold: "border-t-yellow-500",
-  underReview: "border-t-purple-500",
+  pending: "border-t-red",
+  inProgress: "border-t-blue-300",
+  completed: "border-t-green",
+  onHold: "border-t-yellow-300",
+  underReview: "border-t-purple-300",
 };
 
 export default function TaskList({ tasks, canEdit }: TaskListProps) {
@@ -86,7 +86,7 @@ export default function TaskList({ tasks, canEdit }: TaskListProps) {
       <div className="flex gap-5 overflow-x-scroll 2xl:overflow-auto pb-32">
         <DndContext onDragEnd={handleDragEnd}>
           {Object.entries(groupedTasks).map(([status, tasks]) => (
-            <div key={status} className="min-w-[300px] 2xl:min-w-0 2xl:w-1/5">
+            <div key={status} className="w-full flex flex-col">
               <h3
                 className={`capitalize text-xl border-t-8 font-bold bg-white justify-center flex ${statusColors[status]}`}
               >

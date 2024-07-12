@@ -43,18 +43,18 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
   const style = transform
     ? {
         transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-        padding: "1.25rem",
+        padding: "1.15rem",
         backgroundColor: "#fff",
-        width: "300px",
-        borderWidth: "1px",
+        width: "200px",
+        borderWidth: "0.5px",
         borderColor: "rgb(203 213 225 / var(--tw-border-opacity))",
       }
     : undefined;
 
   return (
-    <li className="p-5 bg-white border-slate-700 flex justify-between gap-3 rounded-3xl shadow-xl">
+    <li className="p-5 bg-white border-slate-700 flex justify-between gap-3 rounded-3xl shadow-2xl">
       <div
-        className="min-w-0 lef flex-col gap-y-4"
+        className="flex gap-2 items-start flex-col"
         {...listeners}
         {...attributes}
         ref={setNodeRef}
