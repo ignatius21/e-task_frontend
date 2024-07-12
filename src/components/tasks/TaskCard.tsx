@@ -60,10 +60,10 @@ export default function TaskCard({ task, canEdit }: TaskCardProps) {
         ref={setNodeRef}
         style={style}
       >
-        <p className="text-xl font-bold text-slate-700 text-left">
+        <p className="text-xl font-bold text-slate-700 text-left capitalize">
           {task.name}
         </p>
-        <p className="text-slate-500">{task.description}</p>
+        <p className="text-slate-500 capitalize">{task.description}</p>
       </div>
       <div className="flex shrink-0  gap-x-6">
         {canEdit && (
