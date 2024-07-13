@@ -38,7 +38,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
   return (
     <>
       <div className="mx-auto max-w-3xl g">
-        <h1 className="text-5xl font-black ">Mi Perfil</h1>
+        <h1 className="text-5xl text-gray-500">Mi Perfil</h1>
         <p className="text-2xl font-light text-gray-500 mt-5">
           Actualizar información del perfil
         </p>
@@ -49,7 +49,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
           noValidate
         >
           <div className="mb-5 space-y-3">
-            <label className="text-sm uppercase font-bold" htmlFor="name">
+            <label className="text-sm uppercase text-slate-500" htmlFor="name">
               Nombre
             </label>
             <div className="relative flex items-center">
@@ -83,7 +83,7 @@ export default function ProfileForm({ data }: ProfileFormProps) {
           </div>
 
           <div className="mb-5 space-y-3">
-            <label className="text-sm uppercase font-bold" htmlFor="password">
+            <label className="text-sm uppercase text-slate-500" htmlFor="password">
               E-mail
             </label>
             <div className="relative flex items-center">

@@ -41,7 +41,7 @@ export default function ChangePasswordView() {
   return (
     <>
       <div className="mx-auto max-w-3xl">
-        <h1 className="text-5xl font-black ">Cambiar Password</h1>
+        <h1 className="text-5xl text-gray-500">Cambiar Password</h1>
         <form
           onSubmit={handleSubmit(handleChangePassword)}
           className="mt-10 space-y-5 bg-white shadow-2xl p-10 rounded-3xl"
@@ -49,7 +49,7 @@ export default function ChangePasswordView() {
         >
           <div className="mb-5 space-y-3">
             <label
-              className="text-sm uppercase font-bold"
+              className="text-sm uppercase text-slate-500"
               htmlFor="current_password"
             >
               Password Actual
@@ -87,7 +87,7 @@ export default function ChangePasswordView() {
           </div>
 
           <div className="mb-5 space-y-3">
-            <label className="text-sm uppercase font-bold" htmlFor="password">
+            <label className="text-sm uppercase text-slate-500" htmlFor="password">
               Nuevo Password
             </label>
             <div className="relative flex items-center">
@@ -128,7 +128,7 @@ export default function ChangePasswordView() {
           <div className="mb-5 space-y-3">
             <label
               htmlFor="password_confirmation"
-              className="text-sm uppercase font-bold"
+              className="text-sm uppercase text-slate-500"
             >
               Repetir Password
             </label>
