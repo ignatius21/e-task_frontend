@@ -23,7 +23,7 @@ const AppLayout = () => {
           </section>
           <footer className="py-5">
             <p className="text-center">
-              Todos los derechos reservados &copy; 2024
+              <span className="uppercase text-slate-400">Ignacio</span>⚡ &copy; 2024
             </p>
           </footer>
           <ToastContainer
